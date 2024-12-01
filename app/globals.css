@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #131E3A;
+  --secondary: #5D6A85;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.brand-background-svg{
+  background-image: url(../public/assets/Authorised\ Distributors.svg);
+  background-color: #131E3A;
+  width: inherit;
+}
+
+@media screen and (max-width: 560px) {
+  .brand-background-img {
+    background: url(../public/assets/brands-mobile.png)  no-repeat bottom;
+    background-color: #131E3A;
+    width: inherit;
+  }
+}
+
+.active_element {
+  position: absolute;
+  height: 3px;
+  width: 40px;
+  background: #0F67FD;
+  bottom: -32%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px 10px 0 0;
+}
