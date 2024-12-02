@@ -25,7 +25,7 @@
 }
 
 @media screen and (max-width: 560px) {
-  .brand-background-img {
+  .brand-background-svg {
     background: url(../public/assets/brands-mobile.png) no-repeat bottom;
     background-color: #131E3A;
     width: inherit;

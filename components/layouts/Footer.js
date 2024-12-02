@@ -16,34 +16,35 @@ export default function Footer() {
 						products.
 					</div>
 				</div>
-				<div className="flex md:flex-row flex-col gap-12 text-[#FDFCFF] md:mt-0 mt-10">
-					<div className="flex flex-col gap-5 font-[500] text-md">
-						<div className="cursor-pointer">Home</div>
-						<div className="cursor-pointer">Products</div>
-						<div className="cursor-pointer">About us</div>
-						<div className="cursor-pointer">Contact us</div>
-						<div className="cursor-pointer">Pricelists</div>
+
+				<div className="flex flex-col gap-5 font-[500] text-[#FDFCFF] md:mx-25">
+					<div className="cursor-pointer">Home</div>
+					<div className="cursor-pointer">Products</div>
+					<div className="cursor-pointer">About us</div>
+					<div className="cursor-pointer">Contact us</div>
+					<div className="cursor-pointer">Pricelists</div>
+				</div>
+
+				<div className="flex flex-col gap-4 text-[#FDFCFF] md:mx-25">
+					<div>
+						<a href="mailto:svscientificco@gmail.com">
+							<CiMail />
+							<div>svscientificc@gmail.com</div>
+						</a>
 					</div>
-					<div className="flex flex-col gap-4 text-md">
-						<div>
-							<a href="mailto:svscientificco@gmail.com">
-								<CiMail />
-								<div>svscientificc@gmail.com</div>
-							</a>
-						</div>
-						<div>
-							<IoIosCall />
-							<div className="mt-1">+91 9119014669</div>
-						</div>
-						<div>
-							<FaLocationDot />
-							<div className="w-[230px] mt-1">
-								13 Ram Lila Bhawan, New Mandi, Muzaffar Nagar, Uttar Pradesh-251001
-							</div>
+					<div>
+						<IoIosCall />
+						<div className="mt-1">+91 9119014669</div>
+					</div>
+					<div>
+						<FaLocationDot />
+						<div className="w-[230px] mt-1">
+							13 Ram Lila Bhawan, New Mandi, Muzaffar Nagar, Uttar Pradesh-251001
 						</div>
 					</div>
 				</div>
 			</div>
+
 		</div>
 	);
 }

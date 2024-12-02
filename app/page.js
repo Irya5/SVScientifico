@@ -23,8 +23,6 @@ import Link from "next/link";
 
 export default function Home() {
 	const [setTypingComplete] = useState(false);
-
-
 	const [emailTooltip, setEmailTooltip] = useState("Copy");
 	const [phoneTooltip, setPhoneTooltip] = useState("Copy");
 
@@ -41,7 +39,6 @@ export default function Home() {
 		setPhoneTooltip("Copied!");
 		setTimeout(() => setPhoneTooltip("Copy"), 5000); // Reset tooltip after 2 seconds
 	};
-
 
 	return (
 		<main className="min-h-screen bg-[#FAFCFF]">
@@ -96,6 +93,7 @@ export default function Home() {
 				</div>
 
 				<div className="max-w-5xl flex flex-col md:grid grid-cols-3 gap-8 my-10 mx-4">
+					{/* First card */}
 					<div className="flex flex-col p-4 rounded-[12px] cursor-pointer hover:shadow-serve">
 						<Image
 							src={Serve1}
@@ -110,13 +108,17 @@ export default function Home() {
 						<div className="text-[#5D6A85] text-sm font-regular my-2 h-16">
 							Precision in every chemical, ensuring optimal performance.
 						</div>
-						<div className="w-full flex justify-end">
-							<div className="flex items-center gap-2 text-white w-fit bg-[#242D47] py-3 px-3 rounded-[12px]">
-								<TbArrowNarrowRight size={24} />
+						<div className="w-full flex justify-end mt-2">
+							<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] py-3 px-3 rounded-[12px] hover:bg-blue-500 hover:text-white">
+								<TbArrowNarrowRight size={24} className="group-hover:hidden" />
+
+								<span className="group-hover:block hidden text-sm">View more</span>
+								<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
 							</div>
 						</div>
 					</div>
 
+					{/* Second card */}
 					<div className="flex flex-col p-4 rounded-[12px] cursor-pointer hover:shadow-serve">
 						<Image
 							src={Serve2}
@@ -125,17 +127,23 @@ export default function Home() {
 							height={334}
 							className="rounded-md w-full"
 						/>
-						<div className="text-[#242E49] text-xl mt-4 font-[500]  font-bold">Lab Glassware</div>
+						<div className="text-[#242E49] text-xl mt-4 font-[500] font-bold">Lab Glassware</div>
 						<div className="text-[#5D6A85] text-sm font-regular my-2 h-16">
 							Elevate your experiments with industry-standard laboratory glassware.
 						</div>
-						<div className="w-full flex justify-end">
-							<div className="flex items-center gap-2 text-white w-fit bg-[#242D47] py-3 px-3 rounded-[12px]">
-								<TbArrowNarrowRight size={24} />
+						<div className="w-full flex justify-end mt-2">
+							<div className="w-full flex justify-end mt-2">
+								<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] py-3 px-3 rounded-[12px] hover:bg-blue-500 hover:text-white">
+									<TbArrowNarrowRight size={24} className="group-hover:hidden" />
+
+									<span className="group-hover:block hidden text-sm">View more</span>
+									<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
+								</div>
 							</div>
 						</div>
 					</div>
 
+					{/* Third card */}
 					<div className="flex flex-col p-4 rounded-[12px] cursor-pointer hover:shadow-serve">
 						<Image
 							src={Serve3}
@@ -144,13 +152,18 @@ export default function Home() {
 							height={334}
 							className="rounded-md w-full"
 						/>
-						<div className="text-[#242E49] text-xl mt-4 font-[500]  font-bold">Lab Equipment</div>
+						<div className="text-[#242E49] text-xl mt-4 font-[500] font-bold">Lab Equipment</div>
 						<div className="text-[#5D6A85] text-sm font-regular my-2 h-16">
 							Cutting-edge laboratory equipment sourced from industry leaders.
 						</div>
-						<div className="w-full flex justify-end">
-							<div className="flex items-center gap-2 text-white w-fit bg-[#242D47] py-3 px-3 rounded-[12px]">
-								<TbArrowNarrowRight size={24} />
+						<div className="w-full flex justify-end mt-2">
+							<div className="w-full flex justify-end mt-2">
+								<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] py-3 px-3 rounded-[12px] hover:bg-blue-500 hover:text-white">
+									<TbArrowNarrowRight size={24} className="group-hover:hidden" />
+
+									<span className="group-hover:block hidden text-sm">View more</span>
+									<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
+								</div>
 							</div>
 						</div>
 					</div>
