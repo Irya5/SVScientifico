@@ -3,8 +3,18 @@ import { CiMail } from "react-icons/ci";
 import { IoIosCall } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function Footer() {
+
+	const footerLinks = [
+		{ name: "Home", route: "/" },
+		{ name: "About us", route: "/about-us" },
+		{ name: "Products", route: "/products" },
+		{ name: "Contact us", route: "/contact-us" },
+		{ name: "Pricelists", route: "/pricelists" },
+	];
+
 	return (
 		<div className="bg-[#242E48] flex items-center justify-center px-16 py-20 rounded-t-[24px]">
 			<div className="max-w-4xl flex md:flex-row flex-col md:items-center justify-between w-full">
@@ -17,15 +27,15 @@ export default function Footer() {
 					</div>
 				</div>
 
-				<div className="flex flex-col gap-5 font-[500] text-[#FDFCFF] md:mx-25">
-					<div className="cursor-pointer">Home</div>
-					<div className="cursor-pointer">Products</div>
-					<div className="cursor-pointer">About us</div>
-					<div className="cursor-pointer">Contact us</div>
-					<div className="cursor-pointer">Pricelists</div>
+				<div className="flex flex-col gap-5 font-[500] text-[#FDFCFF] md:mx-25 mt-10">
+					{footerLinks.map((link) => (
+						<Link href={link.route} key={link.name} className="cursor-pointer">
+							{link.name}
+						</Link>
+					))}
 				</div>
 
-				<div className="flex flex-col gap-4 text-[#FDFCFF] md:mx-25">
+				<div className="flex flex-col gap-4 text-[#FDFCFF] md:mx-25 mt-10">
 					<div>
 						<a href="mailto:svscientificco@gmail.com">
 							<CiMail />
