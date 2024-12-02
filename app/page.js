@@ -94,7 +94,7 @@ export default function Home() {
 
 				<div className="max-w-5xl flex flex-col md:grid grid-cols-3 gap-8 my-10 mx-4">
 					{/* First card */}
-					<div className="flex flex-col p-4 rounded-[12px] cursor-pointer hover:shadow-serve">
+					<div className="flex flex-col p-4 rounded-[12px] cursor-pointer hover:shadow-serve group">
 						<Image
 							src={Serve1}
 							alt="serve_img"
@@ -102,24 +102,24 @@ export default function Home() {
 							height={334}
 							className="rounded-md w-full"
 						/>
-						<div className="text-[#242E49] text-xl mt-4 font-[500] font-bold">
+						<div className="text-[#242E49] text-xl mt-4 font-[500] font-bold group-hover:text-black">
 							Chemical Solutions
 						</div>
-						<div className="text-[#5D6A85] text-sm font-regular my-2 h-16">
+						<div className="text-[#5D6A85] text-sm font-regular my-2 h-16 group-hover:text-black">
 							Precision in every chemical, ensuring optimal performance.
 						</div>
 						<div className="w-full flex justify-end mt-2">
-							<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] py-3 px-3 rounded-[12px] hover:bg-blue-500 hover:text-white">
-								<TbArrowNarrowRight size={24} className="group-hover:hidden" />
+							<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] group-hover:bg-blue-600 py-3 px-3 rounded-[12px] transition-all duration-300">
+								<TbArrowNarrowRight size={24} className="group-hover:hidden text-white" />
 
-								<span className="group-hover:block hidden text-sm">View more</span>
+								<span className="group-hover:block hidden text-sm">View More</span>
 								<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
 							</div>
 						</div>
 					</div>
 
 					{/* Second card */}
-					<div className="flex flex-col p-4 rounded-[12px] cursor-pointer hover:shadow-serve">
+					<div className="flex flex-col p-4 rounded-[12px] cursor-pointer hover:shadow-serve group">
 						<Image
 							src={Serve2}
 							alt="serve_img"
@@ -127,24 +127,23 @@ export default function Home() {
 							height={334}
 							className="rounded-md w-full"
 						/>
-						<div className="text-[#242E49] text-xl mt-4 font-[500] font-bold">Lab Glassware</div>
-						<div className="text-[#5D6A85] text-sm font-regular my-2 h-16">
+						<div className="text-[#242E49] text-xl mt-4 font-[500] font-bold group-hover:text-black">Lab Glassware</div>
+						<div className="text-[#5D6A85] text-sm font-regular my-2 h-16 group-hover:text-black">
 							Elevate your experiments with industry-standard laboratory glassware.
 						</div>
-						<div className="w-full flex justify-end mt-2">
-							<div className="w-full flex justify-end mt-2">
-								<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] py-3 px-3 rounded-[12px] hover:bg-blue-500 hover:text-white">
-									<TbArrowNarrowRight size={24} className="group-hover:hidden" />
 
-									<span className="group-hover:block hidden text-sm">View more</span>
-									<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
-								</div>
+						<div className="w-full flex justify-end mt-2">
+							<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] group-hover:bg-blue-600 py-3 px-3 rounded-[12px] transition-all duration-300">
+								<TbArrowNarrowRight size={24} className="group-hover:hidden text-white" />
+
+								<span className="group-hover:block hidden text-sm">View More</span>
+								<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
 							</div>
 						</div>
 					</div>
 
 					{/* Third card */}
-					<div className="flex flex-col p-4 rounded-[12px] cursor-pointer hover:shadow-serve">
+					<div className="flex flex-col p-4 rounded-[12px] cursor-pointer hover:shadow-serve group">
 						<Image
 							src={Serve3}
 							alt="serve_img"
@@ -152,21 +151,23 @@ export default function Home() {
 							height={334}
 							className="rounded-md w-full"
 						/>
-						<div className="text-[#242E49] text-xl mt-4 font-[500] font-bold">Lab Equipment</div>
-						<div className="text-[#5D6A85] text-sm font-regular my-2 h-16">
+						<div className="text-[#242E49] text-xl mt-4 font-[500] font-bold group-hover:text-black">
+							Lab Equipment
+						</div>
+						<div className="text-[#5D6A85] text-sm font-regular my-2 h-16 group-hover:text-black">
 							Cutting-edge laboratory equipment sourced from industry leaders.
 						</div>
 						<div className="w-full flex justify-end mt-2">
-							<div className="w-full flex justify-end mt-2">
-								<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] py-3 px-3 rounded-[12px] hover:bg-blue-500 hover:text-white">
-									<TbArrowNarrowRight size={24} className="group-hover:hidden" />
+							<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] group-hover:bg-blue-600 py-3 px-3 rounded-[12px] transition-all duration-300">
+								<TbArrowNarrowRight size={24} className="group-hover:hidden text-white" />
 
-									<span className="group-hover:block hidden text-sm">View more</span>
-									<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
-								</div>
+								<span className="group-hover:block hidden text-sm">View More</span>
+								<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
 							</div>
 						</div>
 					</div>
+
+
 				</div>
 
 				<div className="bg-[#242E48] md:h-[702px] h-fit w-full rounded-[24px] mt-20 flex items-center justify-center relative">
