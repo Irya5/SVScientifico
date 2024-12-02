@@ -30,14 +30,14 @@ export default function Home() {
 	const handleCopyEmail = (text) => {
 		navigator.clipboard.writeText(text);
 		setEmailTooltip("Copied!");
-		setTimeout(() => setEmailTooltip("Copy"), 5000); // Reset tooltip after 2 seconds
+		setTimeout(() => setEmailTooltip("Copy"), 5000);
 	};
 
 	// Handle copying phone number
 	const handleCopyPhone = (text) => {
 		navigator.clipboard.writeText(text);
 		setPhoneTooltip("Copied!");
-		setTimeout(() => setPhoneTooltip("Copy"), 5000); // Reset tooltip after 2 seconds
+		setTimeout(() => setPhoneTooltip("Copy"), 5000);
 	};
 
 	return (
@@ -65,17 +65,18 @@ export default function Home() {
 				</div>
 			</div>
 
-			<div className="bg-[#242E49] md:mx-20 mx-4 md:h-[350px] h-[550px] my-10 mt-20 rounded-xl brand-background-svg flex md:items-center items-start md:pl-28 pl-6 pt-6">
+			<div className="bg-[#242E49] md:mx-20 mx-4 md:h-[350px] h-[650px] my-10 mt-20 rounded-xl brand-background-svg flex md:items-center items-start md:pl-28 pl-6 pt-8">
 				<div className="flex flex-col">
 					<div className="text-[#DEE3E8] border border-[#DEE3E8] py-3 px-7 rounded-[9px] text-sm w-fit font-gt-super">
 						Our Brands
 					</div>
-					<div className="mt-8 text-[#FDFCFF] text-[48px] font-[700]">
+					<div className="mt-6 text-[#FDFCFF] text-[48px] font-[700]">
 						Authorised <br />
 						Distributor
 					</div>
 				</div>
 			</div>
+
 
 			<div className="flex flex-col items-center justify-center py-10 ">
 				<div className="max-w-4xl flex flex-col items-center md:grid grid-cols-2 gap-8 my-10 mx-4">
@@ -312,10 +313,10 @@ export default function Home() {
 						<button className="text-[#3D4966] text-base border border-[#D6DAE4] px-3 py-2 rounded-[9px] font-gt-super">
 							Contact us
 						</button>
-						<div className="text-[#242E49] font-[500] text-[52px] leading-[50px] mt-2 pr-4 font-bold">
+						<div className="text-[#242E49] font-[500] text-[48px] leading-[50px] mt-2 pr-4 font-bold">
 							Get in Touch
 						</div>
-						<div className="text-[#5D6A85] text-md mt-4">
+						<div className="text-[#5D6A85] text-left text-md mt-4">
 							Ready to level up your Laboratory?
 						</div>
 					</div>
@@ -354,7 +355,7 @@ export default function Home() {
 								<span>+91 9119014669</span>
 								<FiCopy
 									className="cursor-pointer text-[#1367F4] text-xl"
-									title={phoneTooltip} // Tooltip text
+									title={phoneTooltip}
 									onClick={() => handleCopyPhone('+91 9119014669')}
 								/>
 							</div>

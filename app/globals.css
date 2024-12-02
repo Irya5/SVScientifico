@@ -19,14 +19,14 @@
 }
 
 .brand-background-svg {
-  background-image: url(../public/assets/Authorised\ Distributors.svg);
+  background-image: url(../public/assets/Authorised\ distributor\ desktop.svg);
   background-color: #131E3A;
   width: inherit;
 }
 
 @media screen and (max-width: 560px) {
   .brand-background-svg {
-    background: url(../public/assets/brands-mobile.png) no-repeat bottom;
+    background: url(../public/assets/Authosized\ Distributors\ mobile.svg) no-repeat bottom;
     background-color: #131E3A;
     width: inherit;
   }

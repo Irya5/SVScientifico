@@ -205,57 +205,68 @@ export default function Home() {
 					</div>
 
 					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						<div className="p-2">
+						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+						<div className="p-2">
 							<Image src={Qualigens} alt="user" width={130} height={130} />
 						</div>
 					</div>
 					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						<div className="p-2">
+						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+						<div className="p-2">
 							<Image src={Whatman} alt="user" width={130} height={130} />
 						</div>
 					</div>
 					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						<div className="p-2">
+						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+						<div className="p-2">
 							<Image src={Borosil} alt="user" width={130} height={130} />
 						</div>
 					</div>
 					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						<div className="p-2">
+						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+						<div className="p-2">
 							<Image src={Remi} alt="user" width={130} height={130} />
 						</div>
 					</div>
 					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						<div className="p-2">
+						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+						<div className="p-2">
 							<Image src={Systronics} alt="user" width={100} height={80} />
 						</div>
 					</div>
 					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						<div className="p-2">
+						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+						<div className="p-2">
 							<Image src={Finar} alt="user" width={100} height={100} />
 						</div>
 					</div>
 					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						<div className="p-2">
+						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+						<div className="p-2">
 							<Image src={Shimadzu} alt="user" width={130} height={130} />
 						</div>
 					</div>
 					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						<div className="p-2">
+						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+						<div className="p-2">
 							<Image src={Duran} alt="user" width={130} height={130} />
 						</div>
 					</div>
 					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						<div className="p-2">
+						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+						<div className="p-2">
 							<Image src={Rankem} alt="user" width={130} height={130} />
 						</div>
 					</div>
 					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						<div className="p-2">
+						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+						<div className="p-2">
 							<Image src={Avantor} alt="user" width={130} height={130} />
 						</div>
 					</div>
 					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						<div className="p-2">
+						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+						<div className="p-2">
 							<Image src={Molychem} alt="user" width={130} height={130} />
 						</div>
 					</div>
