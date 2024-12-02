@@ -18,10 +18,30 @@ import { IoIosCall } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
+import { FiCopy } from 'react-icons/fi';
 import Link from "next/link";
 
 export default function Home() {
 	const [setTypingComplete] = useState(false);
+
+
+	const [emailTooltip, setEmailTooltip] = useState("Copy");
+	const [phoneTooltip, setPhoneTooltip] = useState("Copy");
+
+	// Handle copying email text
+	const handleCopyEmail = (text) => {
+		navigator.clipboard.writeText(text);
+		setEmailTooltip("Copied!");
+		setTimeout(() => setEmailTooltip("Copy"), 5000); // Reset tooltip after 2 seconds
+	};
+
+	// Handle copying phone number
+	const handleCopyPhone = (text) => {
+		navigator.clipboard.writeText(text);
+		setPhoneTooltip("Copied!");
+		setTimeout(() => setPhoneTooltip("Copy"), 5000); // Reset tooltip after 2 seconds
+	};
+
 
 	return (
 		<main className="min-h-screen bg-[#FAFCFF]">
@@ -42,7 +62,7 @@ export default function Home() {
 							typeSpeed={100}
 							deleteSpeed={50}
 							delaySpeed={1000}
-							onLoopDone={() => setTypingComplete(true)} 
+							onLoopDone={() => setTypingComplete(true)}
 						/>
 					</span>
 				</div>
@@ -63,7 +83,7 @@ export default function Home() {
 			<div className="flex flex-col items-center justify-center py-10 ">
 				<div className="max-w-4xl flex flex-col items-center md:grid grid-cols-2 gap-8 my-10 mx-4">
 					<div className="text-[#242E49] flex flex-col md:items-start items-center ">
-						<ul className= "text-sm list-disc pl-4 font-gt-super">
+						<ul className="text-sm list-disc pl-4 font-gt-super">
 							<li>Our Services</li>
 						</ul>
 						<div className="md:text-[48px] text-[36px] font-[500]">What We Serve</div>
@@ -268,17 +288,17 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div>
+				<div className="mt-8">
 					<Image src={PartnerImg} alt="partner_img" className="w-full" />
 				</div>
 
 				{/* contact us */}
-				<div className=" my-20 mx-4">
+				<div className="my-20 mx-4">
 					<div className="flex flex-col items-center">
 						<button className="text-[#3D4966] text-base border border-[#D6DAE4] px-3 py-2 rounded-[9px] font-gt-super">
 							Contact us
 						</button>
-						<div className="text-[#242E49] font-[500] text-[48px] leading-[50px] mt-2 pr-4">
+						<div className="text-[#242E49] font-[500] text-[52px] leading-[50px] mt-2 pr-4 font-bold">
 							Get in Touch
 						</div>
 						<div className="text-[#5D6A85] text-md mt-4">
@@ -286,48 +306,70 @@ export default function Home() {
 						</div>
 					</div>
 
-					<div className="grid md:grid-cols-3 grid-cols-1 gap-8 max-w-4xl mt-10 text-[#242E49] font-[700] text-md mx-4">
-						<div className="bg-white shadow-lg p-6 rounded-[12px] border border-[#00115E14]">
+					<div className="grid md:grid-cols-3 grid-cols-1 gap-8 gap-x-24 max-w-7xl mt-12 text-[#242E49] font-[700] text-md mx-4">
+						{/* Mail Section */}
+						<div className="bg-white shadow-lg p-6 rounded-[12px] border border-[#00115E14] w-full min-h-[250px]">
 							<div className="bg-[#EDF5FF] w-fit p-2 rounded-[9px]">
 								<CiMail />
 							</div>
-							<div className=" mt-10">Mail us</div>
+							<div className="mt-10">Mail us</div>
 							<div className="text-[#5D6A85] font-[400]">We are here to help</div>
-							<div className="mt-2">
+							<div className="mt-6 flex items-center space-x-2">
 								<a
 									href="mailto:svscientificco@gmail.com"
 									className="hover:underline duration-200 linear mt-2"
 								>
 									svscientificco@gmail.com
 								</a>
+								<FiCopy
+									className="cursor-pointer text-[#1367F4] text-xl"
+									title={emailTooltip} // Tooltip text
+									onClick={() => handleCopyEmail('svscientificco@gmail.com')}
+								/>
 							</div>
 						</div>
 
-						<div className="bg-white shadow-lg p-6 rounded-[12px] border border-[#00115E14]">
+						{/* Call Section */}
+						<div className="bg-white shadow-lg p-6 rounded-[12px] border border-[#00115E14] w-full min-h-[250px]">
 							<div className="bg-[#FFF1F3] w-fit p-2 rounded-[9px]">
 								<IoIosCall />
 							</div>
-							<div className=" mt-10">Call us</div>
-							<div className="text-[#5D6A85] font-[400]">
-								Mon-Fri from 10am to 5pm
+							<div className="mt-10">Call us</div>
+							<div className="text-[#5D6A85] font-[400]">Mon-Fri from 10am to 5pm</div>
+							<div className="mt-6 flex items-center space-x-2">
+								<span>+91 9119014669</span>
+								<FiCopy
+									className="cursor-pointer text-[#1367F4] text-xl"
+									title={phoneTooltip} // Tooltip text
+									onClick={() => handleCopyPhone('+91 9119014669')}
+								/>
 							</div>
-							<div className=" mt-2">+91 9119014669</div>
 						</div>
 
-						<div className="bg-white shadow-lg p-6 rounded-[12px] border border-[#00115E14]">
+						{/* Location Section */}
+						<div className="bg-white shadow-lg p-6 rounded-[12px] border border-[#00115E14] w-full min-h-[250px]">
 							<div className="bg-[#F6F2FF] w-fit p-2 rounded-[9px]">
 								<FaLocationDot />
 							</div>
-							<div className=" mt-10">Visit us</div>
+							<div className="mt-10">Visit us</div>
 							<div className="text-[#5D6A85] font-[400]">Visit our office HQ</div>
-							<button className="text-[#3D4966] text-base border border-[#D6DAE4] px-3 py-2 mt-2 rounded-[9px]">
+							<button
+								className="text-[#3D4966] text-base border border-[#D6DAE4] px-3 py-2 mt-6 rounded-[9px]"
+								onClick={() =>
+									window.open(
+										"https://www.google.com/maps/dir//s.v+scientific+mzn+address/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x390c1b11f0598a57:0xb884f9f824467016?sa=X&ved=1t:3061&ictx=111ps://www.google.com/maps/dir/29.4613312,77.7288238/s.v+scientific+mzn+address/@29.4648898,77.7117666,20.37z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x390c1b11f0598a57:0xb884f9f824467016!2m2!1d77.7116855!2d29.4648884?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D.com/maps?q=your+address+here",
+										"_blank"
+									)
+								}
+							>
 								Get direction
 							</button>
 						</div>
 					</div>
+
+
 				</div>
 			</div>
-
 			{/* footer */}
 		</main>
 	);
