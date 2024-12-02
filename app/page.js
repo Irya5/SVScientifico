@@ -21,7 +21,7 @@ import { Typewriter } from "react-simple-typewriter";
 import Link from "next/link";
 
 export default function Home() {
-	const [isTypingComplete, setTypingComplete] = useState(false);
+	const [setTypingComplete] = useState(false);
 
 	return (
 		<main className="min-h-screen bg-[#FAFCFF]">
@@ -29,12 +29,12 @@ export default function Home() {
 				<div className="flex items-end justify-start col-span-2">
 					<Image src={HeroImg} alt="hero_img" width={671} height={373} />
 				</div>
-				<div className="md:text-md text-sm text-secondary font-regular">
+				<div className="md:text-md text-sm text-secondary font-gt-super">
 					India&apos;s Most Trusted Laboratory Supplier
 				</div>
-				<div className="text-[32px] md:text-[36px] mt-4 text-center">
+				<div className="text-[40px] md:text-[36px] mt-4 text-center font-gt-super">
 					<span className="text-[#242E49]">We provide</span>{" "}
-					<span className="text-[#0F67FD] relative">
+					<span className="text-[#0F67FD] relative font-gt-super-it">
 						{/* Animated Text */}
 						<Typewriter
 							words={["Laboratory Equipments", "Laboratory Chemicals", "Laboratory Glassware", "Trusted Products", "Customer Satisfaction"]}
@@ -44,43 +44,16 @@ export default function Home() {
 							delaySpeed={1000}
 							onLoopDone={() => setTypingComplete(true)} 
 						/>
-
-						{/* Curved Line */}
-						{isTypingComplete && (
-							<svg
-								className="absolute left-1/2 transform -translate-x-1/2 mt-2"
-								width="200"
-								height="20"
-								viewBox="0 0 200 20"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-							>
-								<path
-									d="M0 10 Q100 30 200 10"
-									stroke="#0F67FD"
-									strokeWidth="2"
-									fill="none"
-								>
-									<animate
-										attributeName="stroke-dasharray"
-										from="0, 200"
-										to="200, 0"
-										dur="0.5s"
-										fill="freeze"
-									/>
-								</path>
-							</svg>
-						)}
 					</span>
 				</div>
 			</div>
 
 			<div className="bg-[#242E49] md:mx-20 mx-4 md:h-[350px] h-[550px] my-10 mt-20 rounded-xl brand-background-svg flex md:items-center items-start md:pl-28 pl-6 pt-6">
 				<div className="flex flex-col">
-					<div className="text-[#DEE3E8] border border-[#DEE3E8] py-3 px-7 rounded-[9px] text-sm w-fit">
+					<div className="text-[#DEE3E8] border border-[#DEE3E8] py-3 px-7 rounded-[9px] text-sm w-fit font-gt-super">
 						Our Brands
 					</div>
-					<div className="text-[#FDFCFF] text-[48px] font-[700]">
+					<div className="mt-8 text-[#FDFCFF] text-[48px] font-[700]">
 						Authorised <br />
 						Distributor
 					</div>
@@ -90,7 +63,7 @@ export default function Home() {
 			<div className="flex flex-col items-center justify-center py-10 ">
 				<div className="max-w-4xl flex flex-col items-center md:grid grid-cols-2 gap-8 my-10 mx-4">
 					<div className="text-[#242E49] flex flex-col md:items-start items-center ">
-						<ul className="text-sm list-disc pl-4">
+						<ul className= "text-sm list-disc pl-4 font-gt-super">
 							<li>Our Services</li>
 						</ul>
 						<div className="md:text-[48px] text-[36px] font-[500]">What We Serve</div>
@@ -111,7 +84,7 @@ export default function Home() {
 							height={334}
 							className="rounded-md w-full"
 						/>
-						<div className="text-[#242E49] text-xl mt-4 font-[500]">
+						<div className="text-[#242E49] text-xl mt-4 font-[500] font-bold">
 							Chemical Solutions
 						</div>
 						<div className="text-[#5D6A85] text-sm font-regular my-2 h-16">
@@ -132,7 +105,7 @@ export default function Home() {
 							height={334}
 							className="rounded-md w-full"
 						/>
-						<div className="text-[#242E49] text-xl mt-4 font-[500]">Lab Glassware</div>
+						<div className="text-[#242E49] text-xl mt-4 font-[500]  font-bold">Lab Glassware</div>
 						<div className="text-[#5D6A85] text-sm font-regular my-2 h-16">
 							Elevate your experiments with industry-standard laboratory glassware.
 						</div>
@@ -151,7 +124,7 @@ export default function Home() {
 							height={334}
 							className="rounded-md w-full"
 						/>
-						<div className="text-[#242E49] text-xl mt-4 font-[500]">Lab Equipment</div>
+						<div className="text-[#242E49] text-xl mt-4 font-[500]  font-bold">Lab Equipment</div>
 						<div className="text-[#5D6A85] text-sm font-regular my-2 h-16">
 							Cutting-edge laboratory equipment sourced from industry leaders.
 						</div>
@@ -166,7 +139,7 @@ export default function Home() {
 				<div className="bg-[#242E48] md:h-[702px] h-fit w-full rounded-[24px] mt-20 flex items-center justify-center relative">
 					<div className="max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 my-10 md:px-0 px-8">
 						<div className="flex flex-col justify-center gap-4 w-[300px]">
-							<div className="text-[#DEE3E8] px-6 py-2 rounded-[12px] border border-[#DEE3E8] w-fit">
+							<div className="text-[#DEE3E8] px-6 py-2 rounded-[12px] border border-[#DEE3E8] w-fit font-gt-super">
 								Features
 							</div>
 							<div className="text-[#FDFCFF] text-[56px] leading-[60px] font-[700]">
@@ -274,7 +247,7 @@ export default function Home() {
 
 				<div className="max-w-5xl grid md:grid-cols-5 grid-cols-1 md:gap-x-8 gap-y-8 mt-28 mb-20 mx-4">
 					<div className="flex flex-col items-start md:col-span-2">
-						<button className="text-[#3D4966] text-base border border-[#D6DAE4] px-3 py-2 rounded-[9px]">
+						<button className="text-[#3D4966] text-base border border-[#D6DAE4] px-3 py-2 rounded-[9px] font-gt-super">
 							Trusted by many
 						</button>
 						<div className="text-[#242E49] font-[500] text-[48px] leading-[50px] mt-2 pr-4">
@@ -302,7 +275,7 @@ export default function Home() {
 				{/* contact us */}
 				<div className=" my-20 mx-4">
 					<div className="flex flex-col items-center">
-						<button className="text-[#3D4966] text-base border border-[#D6DAE4] px-3 py-2 rounded-[9px]">
+						<button className="text-[#3D4966] text-base border border-[#D6DAE4] px-3 py-2 rounded-[9px] font-gt-super">
 							Contact us
 						</button>
 						<div className="text-[#242E49] font-[500] text-[48px] leading-[50px] mt-2 pr-4">

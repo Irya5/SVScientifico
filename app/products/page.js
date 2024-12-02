@@ -5,7 +5,7 @@ export default function Products() {
 		<main className="bg-[#FAFCFF]  md:px-24 py-20 md:px-24 px-4">
 			<div className="">
 				<div className="text-[#242E49]">
-					<ul className="text-sm list-disc pl-4 hidden md:block">
+					<ul className="text-sm list-disc pl-4 hidden md:block font-gt-super">
 						<li>Products</li>
 					</ul>
 					<div className="text-[36px] md:text-[48px] font-[500] text-center md:text-left  leading-[50px] mt-4  w-full md:w-1/2">

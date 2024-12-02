@@ -24,7 +24,7 @@ export default function Home() {
 		<main className="min-h-screen bg-[#FAFCFF] ">
 			<div className="pt-20 py-0 md:py-20 md:px-24 px-4">
 				<div className="text-[#242E49]">
-					<ul className="text-sm list-disc pl-4 hidden md:block">
+					<ul className="text-sm list-disc pl-4 hidden md:block font-gt-super">
 						<li>About us</li>
 					</ul>
 					<div className="text-[36px] md:text-[48px] font-[500] leading-[44px]  md:leading-[50px] mt-0 text-center md:text-left md:mt-4 w-full md:w-1/2">

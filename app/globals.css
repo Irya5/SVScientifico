@@ -18,7 +18,7 @@
   }
 }
 
-.brand-background-svg{
+.brand-background-svg {
   background-image: url(../public/assets/Authorised\ Distributors.svg);
   background-color: #131E3A;
   width: inherit;
@@ -26,7 +26,7 @@
 
 @media screen and (max-width: 560px) {
   .brand-background-img {
-    background: url(../public/assets/brands-mobile.png)  no-repeat bottom;
+    background: url(../public/assets/brands-mobile.png) no-repeat bottom;
     background-color: #131E3A;
     width: inherit;
   }
@@ -41,4 +41,35 @@
   left: 50%;
   transform: translateX(-50%);
   border-radius: 10px 10px 0 0;
+}
+
+@font-face {
+  font-family: "GT Super Txt Trial Rg";
+  src: url("https://db.onlinewebfonts.com/t/fb8015cf9f71860c7a06667fbbb0294e.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/fb8015cf9f71860c7a06667fbbb0294e.woff")format("woff"),
+}
+
+@font-face {
+  font-family: "GT Super Txt Trial Rg It";
+  src: url("https://db.onlinewebfonts.com/t/990648b1fb9aefd0b41e7a470bad910d.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/990648b1fb9aefd0b41e7a470bad910d.woff")format("woff"),
+}
+
+.font-gt-super {
+  font-family: "GT Super Txt Trial Rg", serif;
+}
+
+.font-gt-super-it {
+  font-family: "GT Super Txt Trial Rg It", serif;
+}
+
+ul.text-sm.list-disc>li {
+  align-items: center;
+  line-height: 1.5em;
+}
+
+ul.text-sm.list-disc>li::marker {
+  color: #1367F4;
+  font-size: 1.5em;
+  font-weight: bold;
 }
