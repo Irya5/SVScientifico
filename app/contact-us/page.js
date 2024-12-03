@@ -4,26 +4,32 @@ import { IoIosCall } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 import { ImNewTab } from "react-icons/im";
 import { useState } from "react";
-import { FiCopy } from 'react-icons/fi';
+import { FiCopy, FiCheck } from 'react-icons/fi';
 
 export default function ContactUs() {
 
 	const phoneNumber = "+91 9119014669";
-	const [emailTooltip, setEmailTooltip] = useState("Copy");
-	const [phoneTooltip, setPhoneTooltip] = useState("Copy");
 
-	// Handle copying email text
-	const handleCopyEmail = (text) => {
-		navigator.clipboard.writeText(text);
-		setEmailTooltip("Copied!");
-		setTimeout(() => setEmailTooltip("Copy"), 5000);
+	const [isCopiedEmail, setIsCopiedEmail] = useState(false);
+
+	const handleCopyEmail = (email) => {
+		navigator.clipboard.writeText(email)
+			.then(() => {
+				setIsCopiedEmail(true);
+				setTimeout(() => setIsCopiedEmail(false), 10000);
+			})
+			.catch((err) => console.error("Failed to copy text: ", err));
 	};
 
-	// Handle copying phone number
-	const handleCopyPhone = (text) => {
-		navigator.clipboard.writeText(text);
-		setPhoneTooltip("Copied!");
-		setTimeout(() => setPhoneTooltip("Copy"), 5000);
+	const [isCopiedPhone, setIsCopiedPhone] = useState(false);
+
+	const handleCopyPhone = (phoneNumber) => {
+		navigator.clipboard.writeText(phoneNumber)
+			.then(() => {
+				setIsCopiedPhone(true);
+				setTimeout(() => setIsCopiedPhone(false), 10000);
+			})
+			.catch((err) => console.error("Failed to copy text: ", err));
 	};
 
 	return (
@@ -55,21 +61,22 @@ export default function ContactUs() {
 						<a href="mailto:svscientificco@gmail.com" className="hover:underline duration-200 linear mt-2">
 							svscientificco@gmail.com
 						</a>
-						<FiCopy
-							className="cursor-pointer text-[#1367F4] text-xl"
-							title={emailTooltip}
-							onClick={() => handleCopyEmail('svscientificco@gmail.com')}
-						/>
+						{isCopiedEmail ?
+							(<FiCheck
+								className="cursor-pointer text-[#1367F4] text-xl"
+							/>) :
+							(
+								<FiCopy
+									className="cursor-pointer text-[#1367F4] text-xl"
+									onClick={() => handleCopyEmail('svscientificco@gmail.com')}
+								/>
+							)}
 					</div>
 				</div>
 
 				<div className="flex flex-col items-center md:items-start">
 					<div className="bg-white shadow-sm border border-[#00115E14] w-fit p-2 rounded-[9px]">
-						<IoIosCall
-							className="cursor-pointer"
-							title={phoneTooltip}
-							onClick={() => handleCopyPhone('+91 9119014669')}
-						/>
+						<IoIosCall />
 					</div>
 					<div className="mt-4 text-center md:text-left">Call us</div>
 					<div className="text-[#5D6A85] font-[400] text-center md:text-left">Mon-Fri from 10am to 5pm</div>
@@ -77,11 +84,16 @@ export default function ContactUs() {
 						<a href="tel:+919119014669">
 							<span>+91 9119014669</span>
 						</a>
-						<FiCopy
-							className="cursor-pointer text-[#1367F4] text-xl"
-							title={phoneTooltip}
-							onClick={() => handleCopyPhone('+91 9119014669')}
-						/>
+						{isCopiedPhone ? (
+							<FiCheck
+								className="cursor-pointer text-[#1367F4] text-xl"
+							/>
+						) : (
+							<FiCopy
+								className="cursor-pointer text-[#1367F4] text-xl"
+								onClick={() => handleCopyPhone('+91 9119014669')}
+							/>
+						)}
 					</div>
 				</div>
 

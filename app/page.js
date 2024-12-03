@@ -18,43 +18,55 @@ import { IoIosCall } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
-import { FiCopy } from 'react-icons/fi';
+import { FiCopy, FiCheck } from "react-icons/fi";
 import Link from "next/link";
 
 export default function Home() {
-	const [setTypingComplete] = useState(false);
-	const [emailTooltip, setEmailTooltip] = useState("Copy");
-	const [phoneTooltip, setPhoneTooltip] = useState("Copy");
 
-	// Handle copying email text
-	const handleCopyEmail = (text) => {
-		navigator.clipboard.writeText(text);
-		setEmailTooltip("Copied!");
-		setTimeout(() => setEmailTooltip("Copy"), 5000);
+	const [setTypingComplete] = useState(false);
+	const [isCopiedEmail, setIsCopiedEmail] = useState(false);
+
+	const handleCopyEmail = (email) => {
+		navigator.clipboard.writeText(email)
+			.then(() => {
+				setIsCopiedEmail(true);
+				setTimeout(() => setIsCopiedEmail(false), 10000);
+			})
+			.catch((err) => console.error("Failed to copy text: ", err));
 	};
 
-	// Handle copying phone number
-	const handleCopyPhone = (text) => {
-		navigator.clipboard.writeText(text);
-		setPhoneTooltip("Copied!");
-		setTimeout(() => setPhoneTooltip("Copy"), 5000);
+	const [isCopiedPhone, setIsCopiedPhone] = useState(false);
+
+	const handleCopyPhone = (phoneNumber) => {
+		navigator.clipboard.writeText(phoneNumber)
+			.then(() => {
+				setIsCopiedPhone(true);
+				setTimeout(() => setIsCopiedPhone(false), 10000);
+			})
+			.catch((err) => console.error("Failed to copy text: ", err));
 	};
 
 	return (
 		<main className="min-h-screen bg-[#FAFCFF]">
 			<div className="flex flex-col items-center">
-				<div className="flex items-end justify-start col-span-2">
-					<Image src={HeroImg} alt="hero_img" width={671} height={373} />
+				<div className="flex items-end justify-start col-span-2 mt-4">
+					<Image src={HeroImg} alt="hero_img" width={690} height={390} />
 				</div>
-				<div className="md:text-md text-sm text-secondary font-gt-super">
+				<div className="md:text-md text-sm text-secondary font-gt-super mt-2 text-[15px]">
 					India&apos;s Most Trusted Laboratory Supplier
 				</div>
-				<div className="text-[40px] md:text-[36px] mt-4 text-center font-gt-super">
+				<div className="text-[45px] md:text-[36px] mt-4 text-center font-gt-super w-full max-w-[1000px] h-[175px] sm:h-[175px] md:h-[100px] lg:h-[90px] px-4">
 					<span className="text-[#242E49]">We provide</span>{" "}
 					<span className="text-[#0F67FD] relative font-gt-super-it">
 						{/* Animated Text */}
 						<Typewriter
-							words={["Laboratory Equipments", "Laboratory Chemicals", "Laboratory Glassware", "Trusted Products", "Customer Satisfaction"]}
+							words={[
+								"Laboratory Equipments",
+								"Laboratory Chemicals",
+								"Laboratory Glassware",
+								"Trusted Products",
+								"Customer Satisfaction",
+							]}
 							loop={0}
 							typeSpeed={100}
 							deleteSpeed={50}
@@ -65,7 +77,7 @@ export default function Home() {
 				</div>
 			</div>
 
-			<div className="bg-[#242E49] md:mx-20 mx-4 md:h-[350px] h-[650px] my-10 mt-20 rounded-xl brand-background-svg flex md:items-center items-start md:pl-28 pl-6 pt-8">
+			<div className="bg-[#242E49] md:mx-20 mx-4 md:h-[350px] h-[650px] my-10 rounded-xl brand-background-svg flex md:items-center items-start md:pl-28 pl-6 pt-8">
 				<div className="flex flex-col">
 					<div className="text-[#DEE3E8] border border-[#DEE3E8] py-3 px-7 rounded-[9px] text-sm w-fit font-gt-super">
 						Our Brands
@@ -76,7 +88,6 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-
 
 			<div className="flex flex-col items-center justify-center py-10 ">
 				<div className="max-w-4xl flex flex-col items-center md:grid grid-cols-2 gap-8 my-10 mx-4">
@@ -340,11 +351,16 @@ export default function Home() {
 								>
 									svscientificco@gmail.com
 								</a>
-								<FiCopy
-									className="cursor-pointer text-[#1367F4] text-xl"
-									title={emailTooltip} // Tooltip text
-									onClick={() => handleCopyEmail('svscientificco@gmail.com')}
-								/>
+								{isCopiedEmail ?
+									(<FiCheck
+										className="cursor-pointer text-[#1367F4] text-xl"
+									/>) :
+									(
+										<FiCopy
+											className="cursor-pointer text-[#1367F4] text-xl"
+											onClick={() => handleCopyEmail('svscientificco@gmail.com')}
+										/>
+									)}
 							</div>
 						</div>
 
@@ -359,11 +375,16 @@ export default function Home() {
 								<a href="tel:+919119014669">
 									<span>+91 9119014669</span>
 								</a>
-								<FiCopy
-									className="cursor-pointer text-[#1367F4] text-xl"
-									title={phoneTooltip}
-									onClick={() => handleCopyPhone('+91 9119014669')}
-								/>
+								{isCopiedPhone ? (
+									<FiCheck
+										className="cursor-pointer text-[#1367F4] text-xl"
+									/>
+								) : (
+									<FiCopy
+										className="cursor-pointer text-[#1367F4] text-xl"
+										onClick={() => handleCopyPhone('+91 9119014669')}
+									/>
+								)}
 							</div>
 						</div>
 
