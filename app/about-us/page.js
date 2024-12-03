@@ -77,16 +77,16 @@ export default function Home() {
 			</div>
 
 			<div className="bg-[#242E48] h-fit md:h-[702px] w-full rounded-[12px] md:rounded-[24px] flex items-center justify-center relative">
-				<div className="max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 my-10 md:px-0 px-8">
-					<div className="flex flex-col justify-center gap-4 w-[340px]">
+				<div className="max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 my-10 md:px-0 px-4 sm:px-8">
+					<div className="flex flex-col justify-center gap-4 w-full sm:w-[340px]">
 						<div className="text-[#DEE3E8] px-6 py-2 rounded-[12px] border border-[#DEE3E8] w-fit">
 							Principles
 						</div>
-						<div className="text-[#FDFCFF] text-[56px] leading-[60px] font-[700]">
+						<div className="text-[#FDFCFF] text-[40px] sm:text-[56px] leading-[45px] sm:leading-[60px] font-[700]">
 							Our <br />
 							Core Values
 						</div>
-						<div className="text-[#DCE1E8] text-lg">
+						<div className="text-[#DCE1E8] text-base sm:text-lg">
 							The Guiding principles that shape the culture and behavior of our
 							company.
 						</div>
@@ -99,14 +99,14 @@ export default function Home() {
 									alt="core_img"
 									width={38}
 									height={38}
-									className="rounded-md "
+									className="rounded-md"
 								/>
 							</div>
 							<div className="flex-1">
-								<div className="text-[#FDFCFF] text-xl font-[700]">
+								<div className="text-[#FDFCFF] text-xl sm:text-2xl font-[700]">
 									Customer-Centric
 								</div>
-								<div className="text-[#BEC5D2] text-sm mt-1">
+								<div className="text-[#BEC5D2] text-sm sm:text-base mt-1">
 									We're dedicated to surpassing customer expectations with every
 									heartbeat of our business.
 								</div>
@@ -120,14 +120,14 @@ export default function Home() {
 									alt="core_img"
 									width={38}
 									height={38}
-									className="rounded-md "
+									className="rounded-md"
 								/>
 							</div>
 							<div className="flex-1">
-								<div className="text-[#FDFCFF] text-xl font-[700]">
+								<div className="text-[#FDFCFF] text-xl sm:text-2xl font-[700]">
 									Quality Excellence
 								</div>
-								<div className="text-[#BEC5D2] text-sm mt-1">
+								<div className="text-[#BEC5D2] text-sm sm:text-base mt-1">
 									We are committed to delivering products of the highest quality,
 									adhering to rigorous standards.
 								</div>
@@ -141,14 +141,14 @@ export default function Home() {
 									alt="core_img"
 									width={38}
 									height={38}
-									className="rounded-md "
+									className="rounded-md"
 								/>
 							</div>
 							<div className="flex-1">
-								<div className="text-[#FDFCFF] text-xl font-[700]">
+								<div className="text-[#FDFCFF] text-xl sm:text-2xl font-[700]">
 									Accountability
 								</div>
-								<div className="text-[#BEC5D2] text-sm mt-1">
+								<div className="text-[#BEC5D2] text-sm sm:text-base mt-1">
 									We take responsibility for our actions and outcomes, honoring
 									our commitments to customers.
 								</div>
@@ -162,14 +162,14 @@ export default function Home() {
 									alt="core_img"
 									width={38}
 									height={38}
-									className="rounded-md "
+									className="rounded-md"
 								/>
 							</div>
 							<div className="flex-1">
-								<div className="text-[#FDFCFF] text-xl font-[700]">
+								<div className="text-[#FDFCFF] text-xl sm:text-2xl font-[700]">
 									Continuous Learning
 								</div>
-								<div className="text-[#BEC5D2] text-sm mt-1">
+								<div className="text-[#BEC5D2] text-sm sm:text-base mt-1">
 									With insights gleaned from our customers, we adapt and innovate
 									each day.
 								</div>
@@ -197,75 +197,64 @@ export default function Home() {
 				</div>
 
 				<div className="grid xl:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-5 mt-16">
-					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
+
 						<div className="p-2">
 							<Image src={Thermofisher} alt="user" width={130} height={130} />
 						</div>
 					</div>
 
-					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
 						<div className="p-2">
 							<Image src={Qualigens} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
 						<div className="p-2">
 							<Image src={Whatman} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
 						<div className="p-2">
 							<Image src={Borosil} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
 						<div className="p-2">
 							<Image src={Remi} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
 						<div className="p-2">
 							<Image src={Systronics} alt="user" width={100} height={80} />
 						</div>
 					</div>
-					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
 						<div className="p-2">
 							<Image src={Finar} alt="user" width={100} height={100} />
 						</div>
 					</div>
-					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
 						<div className="p-2">
 							<Image src={Shimadzu} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
 						<div className="p-2">
 							<Image src={Duran} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
 						<div className="p-2">
 							<Image src={Rankem} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
 						<div className="p-2">
 							<Image src={Avantor} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-[150px] h-[98px] md:p-0 p-4 md:w-[192px] md:h-[126px] rounded-[12px] flex items-center justify-center"
-						style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>						
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
 						<div className="p-2">
 							<Image src={Molychem} alt="user" width={130} height={130} />
 						</div>

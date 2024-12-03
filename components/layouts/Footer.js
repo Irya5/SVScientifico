@@ -16,7 +16,7 @@ export default function Footer() {
 	];
 
 	return (
-		<div className="bg-[#242E48] flex items-center justify-center px-16 py-20 rounded-t-[24px]">
+		<div className="bg-[#242E48] flex items-center justify-center px-16 py-20 rounded-t-[24px] mt-10">
 			<div className="max-w-4xl flex md:flex-row flex-col md:items-center justify-between w-full">
 				<div className="flex flex-col md:items-start items-center">
 					<Image src={LogoFooterImg} alt="logo" />
@@ -43,8 +43,10 @@ export default function Footer() {
 						</a>
 					</div>
 					<div>
-						<IoIosCall />
-						<div className="mt-1">+91 9119014669</div>
+						<a href="tel:+919119014669">
+							<IoIosCall />
+							<div className="mt-1">+91 9119014669</div>
+						</a>
 					</div>
 					<div>
 						<FaLocationDot />

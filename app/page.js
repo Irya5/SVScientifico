@@ -113,7 +113,7 @@ export default function Home() {
 							<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] group-hover:bg-blue-600 py-3 px-3 rounded-[12px] transition-all duration-300">
 								<TbArrowNarrowRight size={24} className="group-hover:hidden text-white" />
 
-								<span className="group-hover:block hidden text-sm">View More</span>
+								<span className="group-hover:block hidden text-sm font-bold">View More</span>
 								<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
 							</div>
 						</div>
@@ -137,7 +137,7 @@ export default function Home() {
 							<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] group-hover:bg-blue-600 py-3 px-3 rounded-[12px] transition-all duration-300">
 								<TbArrowNarrowRight size={24} className="group-hover:hidden text-white" />
 
-								<span className="group-hover:block hidden text-sm">View More</span>
+								<span className="group-hover:block hidden text-sm font-bold">View More</span>
 								<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
 							</div>
 						</div>
@@ -162,7 +162,7 @@ export default function Home() {
 							<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] group-hover:bg-blue-600 py-3 px-3 rounded-[12px] transition-all duration-300">
 								<TbArrowNarrowRight size={24} className="group-hover:hidden text-white" />
 
-								<span className="group-hover:block hidden text-sm">View More</span>
+								<span className="group-hover:block hidden text-sm font-bold">View More</span>
 								<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
 							</div>
 						</div>
@@ -172,21 +172,22 @@ export default function Home() {
 				</div>
 
 				<div className="bg-[#242E48] md:h-[702px] h-fit w-full rounded-[24px] mt-20 flex items-center justify-center relative">
-					<div className="max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 my-10 md:px-0 px-8">
-						<div className="flex flex-col justify-center gap-4 w-[300px]">
+					<div className="max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 my-10 md:px-0 px-4 sm:px-8">
+						<div className="flex flex-col justify-center gap-4 w-full sm:w-[300px]">
 							<div className="text-[#DEE3E8] px-6 py-2 rounded-[12px] border border-[#DEE3E8] w-fit font-gt-super">
 								Features
 							</div>
-							<div className="text-[#FDFCFF] text-[56px] leading-[60px] font-[700]">
+							<div className="text-[#FDFCFF] text-[40px] sm:text-[56px] leading-[45px] sm:leading-[60px] font-[700]">
 								Why <br />
 								Choose us
 							</div>
-							<div className="text-[#DCE1E8] text-lg">
+							<div className="text-[#DCE1E8] text-base sm:text-lg">
 								Elevate your labs with wide selection of chemicals, glassware, and
 								equipment.
 							</div>
 						</div>
-						<div className="flex flex-col gap-y-8 md:gap-4">
+						<div className="flex flex-col md:gap-4 gap-y-8">
+							{/* Card 1 */}
 							<div className="bg-[#3D4966] flex md:flex-row flex-col gap-4 p-6 md:p-4 md:rounded-[12px] rounded-[24px]">
 								<div className="bg-[#5D6A85] p-4 rounded-[12px] md:w-auto w-fit">
 									<Image
@@ -194,20 +195,21 @@ export default function Home() {
 										alt="why_us_img"
 										width={44}
 										height={44}
-										className="rounded-md "
+										className="rounded-md"
 									/>
 								</div>
 								<div className="flex-1">
-									<div className="text-[#FDFCFF] text-xl font-[700]">
+									<div className="text-[#FDFCFF] text-xl sm:text-2xl font-[700]">
 										Authentic Brands Only
 									</div>
-									<div className="text-[#BEC5D2] text-sm mt-1">
+									<div className="text-[#BEC5D2] text-sm sm:text-base mt-1">
 										All products are 100% branded, ensuring authenticity and
 										quality with every purchase.
 									</div>
 								</div>
 							</div>
 
+							{/* Card 2 */}
 							<div className="bg-[#3D4966] flex md:flex-row flex-col gap-4 p-6 md:p-4 md:rounded-[12px] rounded-[24px]">
 								<div className="bg-[#5D6A85] p-4 rounded-[12px] md:w-auto w-fit">
 									<Image
@@ -215,20 +217,21 @@ export default function Home() {
 										alt="why_us_img"
 										width={44}
 										height={44}
-										className="rounded-md "
+										className="rounded-md"
 									/>
 								</div>
 								<div className="flex-1">
-									<div className="text-[#FDFCFF] text-xl font-[700]">
+									<div className="text-[#FDFCFF] text-xl sm:text-2xl font-[700]">
 										Unbeatable Pricing
 									</div>
-									<div className="text-[#BEC5D2] text-sm mt-1">
+									<div className="text-[#BEC5D2] text-sm sm:text-base mt-1">
 										We strive to offer the most competitive prices to our
-										costumers.
+										customers.
 									</div>
 								</div>
 							</div>
 
+							{/* Card 3 */}
 							<div className="bg-[#3D4966] flex md:flex-row flex-col gap-4 p-6 md:p-4 md:rounded-[12px] rounded-[24px]">
 								<div className="bg-[#5D6A85] p-4 rounded-[12px] md:w-auto w-fit">
 									<Image
@@ -236,19 +239,20 @@ export default function Home() {
 										alt="why_us_img"
 										width={44}
 										height={44}
-										className="rounded-md "
+										className="rounded-md"
 									/>
 								</div>
 								<div className="flex-1">
-									<div className="text-[#FDFCFF] text-xl font-[700]">
+									<div className="text-[#FDFCFF] text-xl sm:text-2xl font-[700]">
 										Diverse Product Range
 									</div>
-									<div className="text-[#BEC5D2] text-sm mt-1">
+									<div className="text-[#BEC5D2] text-sm sm:text-base mt-1">
 										Your one-stop solution for diverse laboratory needs.
 									</div>
 								</div>
 							</div>
 
+							{/* Card 4 */}
 							<div className="bg-[#3D4966] flex md:flex-row flex-col gap-4 p-6 md:p-4 md:rounded-[12px] rounded-[24px]">
 								<div className="bg-[#5D6A85] p-4 rounded-[12px] md:w-auto w-fit">
 									<Image
@@ -256,14 +260,14 @@ export default function Home() {
 										alt="why_us_img"
 										width={44}
 										height={44}
-										className="rounded-md "
+										className="rounded-md"
 									/>
 								</div>
 								<div className="flex-1">
-									<div className="text-[#FDFCFF] text-xl font-[700]">
+									<div className="text-[#FDFCFF] text-xl sm:text-2xl font-[700]">
 										Stock Availability
 									</div>
-									<div className="text-[#BEC5D2] text-sm mt-1">
+									<div className="text-[#BEC5D2] text-sm sm:text-base mt-1">
 										Shop with confidence knowing that our inventory is available
 										with the products you need.
 									</div>
@@ -352,7 +356,9 @@ export default function Home() {
 							<div className="mt-10">Call us</div>
 							<div className="text-[#5D6A85] font-[400]">Mon-Fri from 10am to 5pm</div>
 							<div className="mt-6 flex items-center space-x-2">
-								<span>+91 9119014669</span>
+								<a href="tel:+919119014669">
+									<span>+91 9119014669</span>
+								</a>
 								<FiCopy
 									className="cursor-pointer text-[#1367F4] text-xl"
 									title={phoneTooltip}
