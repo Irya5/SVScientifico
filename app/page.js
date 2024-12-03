@@ -294,10 +294,13 @@ export default function Home() {
 					</div>
 				</div>
 
-				<div className="mt-8">
-					<Image src={PartnerImg} alt="partner_img" className="w-full" />
+				<div>
+					<Image
+						src={PartnerImg}
+						alt="partner_img"
+						className="w-full sm:w-[80%] md:w-[90%] lg:w-[100%] xl:w-[100%]"
+					/>
 				</div>
-
 
 				<div>
 					<ContactSection
