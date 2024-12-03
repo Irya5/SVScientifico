@@ -13,38 +13,14 @@ import PartnerImg from "@/public/assets/partners.png";
 import ReviewImg from "@/public/assets/reviews/review_stars.svg";
 
 import { TbArrowNarrowRight } from "react-icons/tb";
-import { CiMail } from "react-icons/ci";
-import { IoIosCall } from "react-icons/io";
-import { FaLocationDot } from "react-icons/fa6";
 import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
-import { FiCopy, FiCheck } from "react-icons/fi";
 import Link from "next/link";
+import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
 
 	const [setTypingComplete] = useState(false);
-	const [isCopiedEmail, setIsCopiedEmail] = useState(false);
-
-	const handleCopyEmail = (email) => {
-		navigator.clipboard.writeText(email)
-			.then(() => {
-				setIsCopiedEmail(true);
-				setTimeout(() => setIsCopiedEmail(false), 10000);
-			})
-			.catch((err) => console.error("Failed to copy text: ", err));
-	};
-
-	const [isCopiedPhone, setIsCopiedPhone] = useState(false);
-
-	const handleCopyPhone = (phoneNumber) => {
-		navigator.clipboard.writeText(phoneNumber)
-			.then(() => {
-				setIsCopiedPhone(true);
-				setTimeout(() => setIsCopiedPhone(false), 10000);
-			})
-			.catch((err) => console.error("Failed to copy text: ", err));
-	};
 
 	return (
 		<main className="min-h-screen bg-[#FAFCFF]">
@@ -322,94 +298,12 @@ export default function Home() {
 					<Image src={PartnerImg} alt="partner_img" className="w-full" />
 				</div>
 
-				{/* contact us */}
-				<div className="my-20 mx-4">
-					<div className="flex flex-col items-center">
-						<button className="text-[#3D4966] text-base border border-[#D6DAE4] px-3 py-2 rounded-[9px] font-gt-super">
-							Contact us
-						</button>
-						<div className="text-[#242E49] font-[500] text-[48px] leading-[50px] mt-2 pr-4 font-bold">
-							Get in Touch
-						</div>
-						<div className="text-[#5D6A85] text-left text-md mt-4">
-							Ready to level up your Laboratory?
-						</div>
-					</div>
 
-					<div className="grid md:grid-cols-3 grid-cols-1 gap-8 gap-x-24 max-w-7xl mt-12 text-[#242E49] font-[700] text-md mx-4">
-						{/* Mail Section */}
-						<div className="bg-white shadow-lg p-6 rounded-[12px] border border-[#00115E14] w-full min-h-[250px]">
-							<div className="bg-[#EDF5FF] w-fit p-2 rounded-[9px]">
-								<CiMail />
-							</div>
-							<div className="mt-10">Mail us</div>
-							<div className="text-[#5D6A85] font-[400]">We are here to help</div>
-							<div className="mt-6 flex items-center space-x-2">
-								<a
-									href="mailto:svscientificco@gmail.com"
-									className="hover:underline duration-200 linear mt-2"
-								>
-									svscientificco@gmail.com
-								</a>
-								{isCopiedEmail ?
-									(<FiCheck
-										className="cursor-pointer text-[#1367F4] text-xl"
-									/>) :
-									(
-										<FiCopy
-											className="cursor-pointer text-[#1367F4] text-xl"
-											onClick={() => handleCopyEmail('svscientificco@gmail.com')}
-										/>
-									)}
-							</div>
-						</div>
-
-						{/* Call Section */}
-						<div className="bg-white shadow-lg p-6 rounded-[12px] border border-[#00115E14] w-full min-h-[250px]">
-							<div className="bg-[#FFF1F3] w-fit p-2 rounded-[9px]">
-								<IoIosCall />
-							</div>
-							<div className="mt-10">Call us</div>
-							<div className="text-[#5D6A85] font-[400]">Mon-Fri from 10am to 5pm</div>
-							<div className="mt-6 flex items-center space-x-2">
-								<a href="tel:+919119014669">
-									<span>+91 9119014669</span>
-								</a>
-								{isCopiedPhone ? (
-									<FiCheck
-										className="cursor-pointer text-[#1367F4] text-xl"
-									/>
-								) : (
-									<FiCopy
-										className="cursor-pointer text-[#1367F4] text-xl"
-										onClick={() => handleCopyPhone('+91 9119014669')}
-									/>
-								)}
-							</div>
-						</div>
-
-						{/* Location Section */}
-						<div className="bg-white shadow-lg p-6 rounded-[12px] border border-[#00115E14] w-full min-h-[250px]">
-							<div className="bg-[#F6F2FF] w-fit p-2 rounded-[9px]">
-								<FaLocationDot />
-							</div>
-							<div className="mt-10">Visit us</div>
-							<div className="text-[#5D6A85] font-[400]">Visit our office HQ</div>
-							<button
-								className="text-[#3D4966] text-base border border-[#D6DAE4] px-3 py-2 mt-6 rounded-[9px]"
-								onClick={() =>
-									window.open(
-										"https://www.google.com/maps/dir//s.v+scientific+mzn+address/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x390c1b11f0598a57:0xb884f9f824467016?sa=X&ved=1t:3061&ictx=111ps://www.google.com/maps/dir/29.4613312,77.7288238/s.v+scientific+mzn+address/@29.4648898,77.7117666,20.37z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x390c1b11f0598a57:0xb884f9f824467016!2m2!1d77.7116855!2d29.4648884?entry=ttu&g_ep=EgoyMDI0MTEyNC4xIKXMDSoASAFQAw%3D%3D.com/maps?q=your+address+here",
-										"_blank"
-									)
-								}
-							>
-								Get direction
-							</button>
-						</div>
-					</div>
-
-
+				<div>
+					<ContactSection
+						boldText="Get in Touch"
+						subText="Ready to level up your Laboratory?"
+					/>
 				</div>
 			</div>
 			{/* footer */}

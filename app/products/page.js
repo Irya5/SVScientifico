@@ -1,3 +1,5 @@
+"use client";
+import ContactSection from "@/components/ContactSection";
 import { MdOutlineSearch } from "react-icons/md";
 
 export default function Products() {
@@ -60,6 +62,9 @@ export default function Products() {
 						</div>
 					</div>
 				</div>
+			</div>
+			<div>
+				<ContactSection/>
 			</div>
 		</main>
 	);
