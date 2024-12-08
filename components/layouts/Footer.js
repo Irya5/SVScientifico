@@ -44,7 +44,7 @@ export default function Footer() {
 					<div className="hover:translate-x-[5px]">
 						<a href="mailto:svscientificco@gmail.com">
 							<CiMail />
-							<div>svscientificc@gmail.com</div>
+							<div>svscientificco@gmail.com</div>
 						</a>
 					</div>
 					<div className="hover:translate-x-[5px]">
