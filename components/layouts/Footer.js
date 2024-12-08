@@ -29,29 +29,36 @@ export default function Footer() {
 
 				<div className="flex flex-col gap-5 font-[500] text-[#FDFCFF] md:mx-25 mt-10">
 					{footerLinks.map((link) => (
-						<Link href={link.route} key={link.name} className="cursor-pointer">
+						<Link
+							href={link.route}
+							key={link.name}
+							className="cursor-pointer transform transition-all duration-200 ease-in-out hover:translate-x-[5px]" // Move to the right on hover
+						>
 							{link.name}
 						</Link>
 					))}
 				</div>
 
+
 				<div className="flex flex-col gap-4 text-[#FDFCFF] md:mx-25 mt-10">
-					<div>
+					<div className="hover:translate-x-[5px]">
 						<a href="mailto:svscientificco@gmail.com">
 							<CiMail />
 							<div>svscientificc@gmail.com</div>
 						</a>
 					</div>
-					<div>
+					<div className="hover:translate-x-[5px]">
 						<a href="tel:+919119014669">
 							<IoIosCall />
 							<div className="mt-1">+91 9119014669</div>
 						</a>
 					</div>
-					<div>
+					<div className="hover:translate-x-[5px]">
 						<FaLocationDot />
-						<div className="w-[230px] mt-1">
-							13 Ram Lila Bhawan, New Mandi, Muzaffar Nagar, Uttar Pradesh-251001
+						<div className="w-[230px] mt-1" >
+							<a href="https://www.google.com/maps/dir//s.v+scientific+mzn+address">
+								13 Ram Lila Bhawan, New Mandi, Muzaffar Nagar, Uttar Pradesh-251001
+							</a>
 						</div>
 					</div>
 				</div>

@@ -6,27 +6,30 @@ import React, { useState } from 'react';
 export default function Pricelists() {
 
   const pricelists = [
-    { name: 'Aczet Pricelist', year: '2024-2025', pdf: '/assets/current-pricelist/Qualigens.pdf' },
-    { name: 'Aquasol Pricelist', year: '2024-2025', pdf: '/assets/current-pricelist/Qualigens.pdf' },
-    { name: 'Avantor Pricelist', year: '2024-2025', pdf: '/assets/current-pricelist/Qualigens.pdf' },
-    { name: 'Axiva Pricelist', year: '2024-2025', pdf: '/assets/current-pricelist/Qualigens.pdf' },
-    { name: 'Borosil Pricelist', year: '2024-2025', pdf: '/path/to/Borosil-Pricelist-2024-2025.pdf' },
-    { name: 'BP Industries Pricelist', year: '2024-2025', pdf: '/assets/current-pricelist/Qualigens.pdf' },
-    { name: 'Glosil Pricelist', year: '2024-2025', pdf: '/assets/current-pricelist/Qualigens.pdf' },
-    { name: 'Himedia Pricelist', year: '2024-2025', pdf: '/path/to/Borosil-Pricelist-2024-2025.pdf' },
-    { name: 'ITL Pricelist', year: '2024-2025', pdf: '/path/to/Borosil-Pricelist-2024-2025.pdf' },
-    { name: 'Merck Pricelist', year: '2024-2025', pdf: '/path/to/Borosil-Pricelist-2024-2025.pdf' },
-    { name: 'Olympus Pricelist', year: '2024-2025', pdf: '/path/to/Borosil-Pricelist-2024-2025.pdf' },
-    { name: 'Physics Indosaw Pricelist', year: '2024-2025', pdf: '/path/to/Borosil-Pricelist-2024-2025.pdf' },
-    { name: 'Prerana Pricelist', year: '2024-2025', pdf: '/path/to/Borosil-Pricelist-2024-2025.pdf' },
-    { name: 'Qualigens Pricelist', year: '2024-2025', pdf: '/assets/current-pricelist/Qualigens.pdf' },
-    { name: 'Remi Pricelist', year: '2024-2025', pdf: '/path/to/Borosil-Pricelist-2024-2025.pdf' },
-    { name: 'Shimadzu Pricelist', year: '2024-2025', pdf: '/path/to/Borosil-Pricelist-2024-2025.pdf' },
-    { name: 'SRL Pricelist', year: '2024-2025', pdf: '/path/to/Borosil-Pricelist-2024-2025.pdf' },
-    { name: 'Systrinics Pricelist', year: '2024-2025', pdf: '/path/to/Borosil-Pricelist-2024-2025.pdf' },
-    { name: 'Tarsons Pricelist', year: '2024-2025', pdf: '/path/to/Borosil-Pricelist-2024-2025.pdf' },
-    { name: 'Toshniwal Pricelist', year: '2024-2025', pdf: '/path/to/Borosil-Pricelist-2024-2025.pdf' },
-    { name: 'Whatman Pricelist', year: '2024-2025', pdf: '/path/to/Borosil-Pricelist-2024-2025.pdf' },
+
+    { name: 'Aczet Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1U63g-x_Nz-ZbxQdCvoZli8liCZ18CJrC/view?usp=sharing' },
+    { name: 'Aquasol Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1lbzI9n-GpWuWZj_6f09Wog6py7gvGEiN/view?usp=sharing' },
+    { name: 'Avantor Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1zj513oPHHjFraPmlaaM1UQbHg_0E28iY/view?usp=sharing' },
+    { name: 'Axiva Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1f51PymHW5Xmwe8juvIfgzxrJH88Lifhm/view?usp=drive_link' },
+    { name: 'Borosil Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1FlzLzc80ob1vw6dbabHuFfLwMKkr5O7u/view?usp=drive_link' },
+    { name: 'BP Industries Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1sMN6aOMmYtYrA6gU9LMR1JF1a3A10Wit/view?usp=drive_link' },
+    { name: 'Eutech Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1R9QNstcZLzVoDsZWTH6eVlrxcfqGC59u/view?usp=drive_link' },
+    { name: 'Himedia Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1Jq7sPwhqasbyxLDOoD8VJUh1Yts76aYN/view?usp=drive_link' },
+    { name: 'Labtronics Pricelist', year: '2023-2024', pdf: 'https://drive.google.com/file/d/1mW7t788H1wguI8FCw-5mE1QfSYNY0dBr/view?usp=drive_link'},
+    { name: 'Lemico Pricelist', year: '2023-2024', pdf: 'https://drive.google.com/file/d/1YR8CTPmPjZLxxoNecm6I6NglfyoJQROD/view?usp=drive_link'},
+    { name: 'Loba Pricelist', year: '2023-2024', pdf: 'https://drive.google.com/file/d/1Jbt_lE4UsGMtpTODukd_WBWNEpJNJjs7/view?usp=drive_link' },
+    { name: 'Merck Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1PYzkz3uB8V4w9mXz6M8YWm7sXYB5XHBl/view?usp=drive_link' },
+    { name: 'Olympus Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1rXjSkC-TPG3-OYQT23jqjVbfC5olGAe-/view?usp=drive_link' },
+    { name: 'Physics Indosaw Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1GbmgEglKaSX1T-71pF5wkr1vxfDv82hX/view?usp=drive_link' },
+    { name: 'Prerana Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1W-aPhtk_wHcRbYC5JWZxwAiYuUKfc8kF/view?usp=drive_link' },
+    { name: 'Qualigens Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1W-aPhtk_wHcRbYC5JWZxwAiYuUKfc8kF/view?usp=sharing' },
+    { name: 'Remi Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1rJ43RX1MHsnvKVNXxs-C7wj90CiUwYyL/view?usp=drive_link' },
+    { name: 'Shimadzu Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1vAejexq6-BHtGmiixUzBTLy_6drdItXf/view?usp=drive_link' },
+    { name: 'SRL Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1SwRYSkF0gN0QZh0LDaf4MtWjxjuz5PQv/view?usp=drive_link' },
+    { name: 'Systronics Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1SRWv0Xef23Su735LG9SS7Bll2A-IMbIr/view?usp=drive_link' },
+    { name: 'Tarson Pricelist', year: '2023-2024', pdf: 'https://drive.google.com/file/d/1MufGJZAKDy4zdMMzHiryiOlsG0wyj6dJ/view?usp=drive_link' },
+    { name: 'Toshniwal Pricelist', year: '2023-2024', pdf: 'https://drive.google.com/file/d/1RHibjcYf5fNOwt3bp1GLazsI7wZW9mad/view?usp=drive_link' },
+    { name: 'Whatman Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1OBJUVo7m0N4R3L3FHhEzTL5xM5XT2ZE8/view?usp=drive_link' },
 
   ];
 
@@ -69,8 +72,9 @@ export default function Pricelists() {
                 </div>
                 <a
                   href={pricelist.pdf}
-                  download={`${pricelist.name.replace(/ /g, '_')}_${pricelist.year}.pdf`}
-                  className="border cursor-pointer border-[#5D6A85] rounded-[8px] px-5 py-2 bg-white font-[500] text-[#242E49]"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border cursor-pointer border-[#5D6A85] rounded-[8px] px-5 py-2 bg-white font-[500] text-[#242E49] hover:bg-blue-600 hover:text-white"
                 >
                   Download
                 </a>
