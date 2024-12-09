@@ -21,7 +21,6 @@ export default function Pricelists() {
     { name: 'Merck Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1R9QNstcZLzVoDsZWTH6eVlrxcfqGC59u/view?usp=drive_link' },
     { name: 'Olympus Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1PYzkz3uB8V4w9mXz6M8YWm7sXYB5XHBl/view?usp=drive_link' },
     { name: 'Physics Indosaw Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1rXjSkC-TPG3-OYQT23jqjVbfC5olGAe-/view?usp=drive_link' },
-    { name: 'Prerana Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1GbmgEglKaSX1T-71pF5wkr1vxfDv82hX/view?usp=drive_link' },
     { name: 'Qualigens Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1W-aPhtk_wHcRbYC5JWZxwAiYuUKfc8kF/view?usp=drive_link' },
     { name: 'Remi Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1rJ43RX1MHsnvKVNXxs-C7wj90CiUwYyL/view?usp=drive_link' },
     { name: 'Shimadzu Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1vAejexq6-BHtGmiixUzBTLy_6drdItXf/view?usp=drive_link' },
