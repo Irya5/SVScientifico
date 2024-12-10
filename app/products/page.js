@@ -1,21 +1,27 @@
 'use client';  // Ensures that the code runs on the client side
 
-import { useState, useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
-import { MdOutlineSearch } from "react-icons/md";
-import ContactSection from "@/components/ContactSection";
-import * as XLSX from "xlsx";
+import { useState, useEffect } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
+import { MdOutlineSearch } from 'react-icons/md';
+import ContactSection from '@/components/ContactSection';
+import * as XLSX from 'xlsx';
 
 export default function Products() {
-	const categories = ["All Products", "Chemicals", "Glassware", "Equipments"];
+	const categories = ['All Products', 'Chemicals', 'Glassware', 'Equipments'];
 	const router = useRouter();
-	const searchParams = useSearchParams();
-	const [activeCategory, setActiveCategory] = useState("All Products");
+	const [activeCategory, setActiveCategory] = useState('All Products');
 	const [products, setProducts] = useState([]);
-	const [searchQuery, setSearchQuery] = useState("");
-	const [loading, setLoading] = useState(true);  // Loading state
+	const [searchQuery, setSearchQuery] = useState('');
+	const [loading, setLoading] = useState(true); // Loading state
+	const [isClient, setIsClient] = useState(false); // State to track if we are on the client
 
-	const googleDriveLink = 'https://docs.google.com/spreadsheets/d/1R66dgCmLpU3IL5duxVkoCjKqux38o7o3/edit?usp=sharing&ouid=115046879177425011658&rtpof=true&sd=true';
+	const googleDriveLink =
+		'https://docs.google.com/spreadsheets/d/1R66dgCmLpU3IL5duxVkoCjKqux38o7o3/edit?usp=sharing&ouid=115046879177425011658&rtpof=true&sd=true';
+
+	// Set isClient to true once the component is mounted (client-side)
+	useEffect(() => {
+		setIsClient(true);
+	}, []);
 
 	// Fetch and parse the Excel file when the component mounts
 	useEffect(() => {
@@ -38,17 +44,17 @@ export default function Products() {
 				// Clean the data (skip empty rows and map correctly)
 				const cleanedData = rawData
 					.slice(1)
-					.filter(row => row[0] && row[1])  // Filter out empty rows
-					.map(row => ({
-						Category: row[1],    // 'A' column
-						ProductName: row[2],  // 'B' column
-						Pack: row[3],         // 'C' column
+					.filter((row) => row[0] && row[1]) // Filter out empty rows
+					.map((row) => ({
+						Category: row[1], // 'A' column
+						ProductName: row[2], // 'B' column
+						Pack: row[3], // 'C' column
 					}));
 
 				// Set the products state
 				setProducts(cleanedData);
 			} catch (error) {
-				console.error("Error fetching or parsing Excel file:", error);
+				console.error('Error fetching or parsing Excel file:', error);
 			} finally {
 				setLoading(false); // Set loading to false after the fetch operation
 			}
@@ -57,31 +63,33 @@ export default function Products() {
 		fetchAndParseExcel();
 	}, []);
 
+	// Conditionally use searchParams only on the client side
 	useEffect(() => {
-		const category = searchParams.get('category');
-		if (category) {
-			setActiveCategory(category);
+		if (isClient) {
+			const searchParams = new URLSearchParams(window.location.search); // Use the window object to access the query params
+			const category = searchParams.get('category');
+			if (category) {
+				setActiveCategory(category);
+			}
 		}
-	}, [searchParams]);
+	}, [isClient]); // Ensure this effect runs after isClient is set to true
 
 	// Filtering products based on category and search query
-	const filteredProducts = products.filter(product => {
+	const filteredProducts = products.filter((product) => {
 		// Ensure Category is a string, otherwise fallback to an empty string
-		const category = (typeof product.Category === 'string' ? product.Category.trim() : "").toLowerCase();
-
-		const matchesCategory = activeCategory === "All Products" || category === activeCategory.toLowerCase();
+		const category = typeof product.Category === 'string' ? product.Category.trim() : '';
+		const matchesCategory = activeCategory === 'All Products' || category === activeCategory.toLowerCase();
 		const matchesSearchQuery = product.ProductName && product.ProductName.toLowerCase().includes(searchQuery.toLowerCase());
 
 		return matchesCategory && matchesSearchQuery;
 	});
 
-
 	const handleCategoryClick = (category) => {
 		setActiveCategory(category);
-		if (category !== "All Products") {
+		if (category !== 'All Products') {
 			router.push(`/products?category=${category}`);
 		} else {
-			router.push("/products");
+			router.push('/products');
 		}
 	};
 
@@ -108,8 +116,8 @@ export default function Products() {
 						<div
 							key={index}
 							className={`cursor-pointer rounded-[12px] text-center font-[700] text-lg py-3.5 transition-all duration-300 ${activeCategory === categoryName
-								? "bg-black text-white" // Active category styles
-								: "bg-[#F2F5F9] text-[#242E49] hover:bg-[#d9dce0] hover:text-black"
+								? 'bg-black text-white' // Active category styles
+								: 'bg-[#F2F5F9] text-[#242E49] hover:bg-[#d9dce0] hover:text-black'
 								}`}
 							onClick={() => handleCategoryClick(categoryName)} // Update category and URL
 						>
