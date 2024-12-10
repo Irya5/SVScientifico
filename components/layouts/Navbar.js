@@ -58,7 +58,9 @@ export default function Navbar() {
 			{/* Mobile Navigation */}
 			<nav className="flex justify-between items-center h-[76px] bg-[#FAFCFF] px-6 md:hidden w-full">
 				<div>
-					<Image src={Logo} alt="logo" width={57} height={44} />
+					<a href="/">
+						<Image src={Logo} alt="logo" width={57} height={44} />
+					</a>
 				</div>
 
 				{/* Mobile Menu Toggle Button (Hamburger Icon) */}

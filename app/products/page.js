@@ -14,6 +14,8 @@ export default function Products() {
 	const [searchQuery, setSearchQuery] = useState('');
 	const [loading, setLoading] = useState(true); // Loading state
 	const [isClient, setIsClient] = useState(false); // Track if we're on the client side
+	const [currentPage, setCurrentPage] = useState(1); // Track current page
+	const [productsPerPage] = useState(10); // Set the number of products per page
 
 	const googleDriveLink =
 		'https://docs.google.com/spreadsheets/d/1R66dgCmLpU3IL5duxVkoCjKqux38o7o3/edit?usp=sharing&ouid=115046879177425011658&rtpof=true&sd=true';
@@ -85,6 +87,11 @@ export default function Products() {
 		return matchesCategory && matchesSearchQuery;
 	});
 
+	// Pagination logic
+	const indexOfLastProduct = currentPage * productsPerPage;
+	const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+	const currentProducts = filteredProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+
 	// Handle category selection and update URL
 	const handleCategoryClick = (category) => {
 		setActiveCategory(category);
@@ -97,6 +104,11 @@ export default function Products() {
 
 	const handleSearchChange = (e) => {
 		setSearchQuery(e.target.value);
+	};
+
+	// Handle pagination page change
+	const handlePageChange = (pageNumber) => {
+		setCurrentPage(pageNumber);
 	};
 
 	// Ensure the component does not try to use `useSearchParams` before mounting
@@ -123,8 +135,8 @@ export default function Products() {
 						<div
 							key={index}
 							className={`cursor-pointer rounded-[12px] text-center font-[700] text-lg py-3.5 transition-all duration-300 ${activeCategory === categoryName
-									? 'bg-black text-white' // Active category styles
-									: 'bg-[#F2F5F9] text-[#242E49] hover:bg-[#d9dce0] hover:text-black'
+								? 'bg-black text-white' // Active category styles
+								: 'bg-[#F2F5F9] text-[#242E49] hover:bg-[#d9dce0] hover:text-black'
 								}`}
 							onClick={() => handleCategoryClick(categoryName)} // Update category and URL
 						>
@@ -149,10 +161,10 @@ export default function Products() {
 					<div className="flex flex-col mt-8">
 						{loading ? (
 							<div>Loading products...</div>
-						) : filteredProducts.length === 0 ? (
+						) : currentProducts.length === 0 ? (
 							<div>No products found</div>
 						) : (
-							filteredProducts.map((product, index) => (
+							currentProducts.map((product, index) => (
 								<div key={index} className="flex items-center justify-between border-b py-6 border-[#DCE1E8]">
 									<div className="flex flex-col gap-2">
 										<div className="text-[#242E49] font-[700] text-lg">{product.ProductName}</div>
@@ -164,6 +176,24 @@ export default function Products() {
 								</div>
 							))
 						)}
+					</div>
+
+					{/* Pagination controls */}
+					<div className="flex justify-between mt-8">
+						<button
+							onClick={() => handlePageChange(currentPage - 1)}
+							disabled={currentPage === 1}
+							className="px-4 py-2 bg-[#F2F5F9] text-[#242E49] rounded-[8px] disabled:opacity-50"
+						>
+							Previous
+						</button>
+						<button
+							onClick={() => handlePageChange(currentPage + 1)}
+							disabled={currentPage * productsPerPage >= filteredProducts.length}
+							className="px-4 py-2 bg-[#F2F5F9] text-[#242E49] rounded-[8px] disabled:opacity-50"
+						>
+							Next
+						</button>
 					</div>
 				</div>
 			</div>
