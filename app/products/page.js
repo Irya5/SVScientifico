@@ -1,7 +1,7 @@
 'use client';  // Ensures that the code runs on the client side
 
 import { useState, useEffect } from 'react';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation'; // Using useSearchParams hook
 import { MdOutlineSearch } from 'react-icons/md';
 import ContactSection from '@/components/ContactSection';
 import * as XLSX from 'xlsx';
@@ -9,19 +9,14 @@ import * as XLSX from 'xlsx';
 export default function Products() {
 	const categories = ['All Products', 'Chemicals', 'Glassware', 'Equipments'];
 	const router = useRouter();
+	const searchParams = useSearchParams(); // Use this hook to listen to URL query changes
 	const [activeCategory, setActiveCategory] = useState('All Products');
 	const [products, setProducts] = useState([]);
 	const [searchQuery, setSearchQuery] = useState('');
 	const [loading, setLoading] = useState(true); // Loading state
-	const [isClient, setIsClient] = useState(false); // State to track if we are on the client
 
 	const googleDriveLink =
 		'https://docs.google.com/spreadsheets/d/1R66dgCmLpU3IL5duxVkoCjKqux38o7o3/edit?usp=sharing&ouid=115046879177425011658&rtpof=true&sd=true';
-
-	// Set isClient to true once the component is mounted (client-side)
-	useEffect(() => {
-		setIsClient(true);
-	}, []);
 
 	// Fetch and parse the Excel file when the component mounts
 	useEffect(() => {
@@ -63,33 +58,34 @@ export default function Products() {
 		fetchAndParseExcel();
 	}, []);
 
-	// Conditionally use searchParams only on the client side
+	// Listen for changes to the query parameters (category)
 	useEffect(() => {
-		if (isClient) {
-			const searchParams = new URLSearchParams(window.location.search); // Use the window object to access the query params
-			const category = searchParams.get('category');
-			if (category) {
-				setActiveCategory(category);
-			}
+		const category = searchParams.get('category');
+		if (category) {
+			setActiveCategory(category); // Update active category based on query parameter
+		} else {
+			setActiveCategory('All Products'); // Default to 'All Products' if no category is set
 		}
-	}, [isClient]); // Ensure this effect runs after isClient is set to true
+	}, [searchParams]); // This effect will re-run whenever the searchParams change
 
 	// Filtering products based on category and search query
 	const filteredProducts = products.filter((product) => {
-		// Ensure Category is a string, otherwise fallback to an empty string
 		const category = typeof product.Category === 'string' ? product.Category.trim() : '';
-		const matchesCategory = activeCategory === 'All Products' || category === activeCategory.toLowerCase();
-		const matchesSearchQuery = product.ProductName && product.ProductName.toLowerCase().includes(searchQuery.toLowerCase());
+		const matchesCategory =
+			activeCategory === 'All Products' || category.toLowerCase() === activeCategory.toLowerCase();
+		const matchesSearchQuery =
+			product.ProductName && product.ProductName.toLowerCase().includes(searchQuery.toLowerCase());
 
 		return matchesCategory && matchesSearchQuery;
 	});
 
+	// Handle category selection and update URL
 	const handleCategoryClick = (category) => {
 		setActiveCategory(category);
 		if (category !== 'All Products') {
-			router.push(`/products?category=${category}`);
+			router.push(`/products?category=${category}`); // Update the URL with the selected category
 		} else {
-			router.push('/products');
+			router.push('/products'); // If "All Products" is selected, remove the category query
 		}
 	};
 
@@ -116,8 +112,8 @@ export default function Products() {
 						<div
 							key={index}
 							className={`cursor-pointer rounded-[12px] text-center font-[700] text-lg py-3.5 transition-all duration-300 ${activeCategory === categoryName
-								? 'bg-black text-white' // Active category styles
-								: 'bg-[#F2F5F9] text-[#242E49] hover:bg-[#d9dce0] hover:text-black'
+									? 'bg-black text-white' // Active category styles
+									: 'bg-[#F2F5F9] text-[#242E49] hover:bg-[#d9dce0] hover:text-black'
 								}`}
 							onClick={() => handleCategoryClick(categoryName)} // Update category and URL
 						>
