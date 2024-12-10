@@ -111,7 +111,6 @@ export default function Products() {
 		setCurrentPage(pageNumber);
 	};
 
-	// Ensure the component does not try to use `useSearchParams` before mounting
 	if (!isClient) {
 		return <div>Loading...</div>; // Show loading state before client-side mount
 	}
