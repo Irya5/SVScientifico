@@ -8,11 +8,11 @@ export default function Pricelists() {
   const pricelists = [
 
     { name: 'Aczet Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1U63g-x_Nz-ZbxQdCvoZli8liCZ18CJrC/view?usp=sharing' },
+    { name: 'Ambassador Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1FlzLzc80ob1vw6dbabHuFfLwMKkr5O7u/view?usp=drive_link' },
     { name: 'Aquasol Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1lbzI9n-GpWuWZj_6f09Wog6py7gvGEiN/view?usp=sharing' },
     { name: 'Avantor Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1zj513oPHHjFraPmlaaM1UQbHg_0E28iY/view?usp=sharing' },
     { name: 'Axiva Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1f51PymHW5Xmwe8juvIfgzxrJH88Lifhm/view?usp=drive_link' },
     { name: 'Borosil Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1nugGK1oHdTDUzdlNs4__C8yTgkVPxCoP/view?usp=drive_link' },
-    { name: 'BP Industries Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1FlzLzc80ob1vw6dbabHuFfLwMKkr5O7u/view?usp=drive_link' },
     { name: 'Eutech Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1Jq7sPwhqasbyxLDOoD8VJUh1Yts76aYN/view?usp=drive_link' },
     { name: 'Himedia Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/file/d/1sMN6aOMmYtYrA6gU9LMR1JF1a3A10Wit/view?usp=drive_link' },
     { name: 'Labtronics Pricelist', year: '2023-2024', pdf: 'https://drive.google.com/file/d/1mW7t788H1wguI8FCw-5mE1QfSYNY0dBr/view?usp=drive_link'},
