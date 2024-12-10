@@ -10,7 +10,6 @@ import WhyUs3 from "@/public/assets/why-us/why3.svg";
 import WhyUs4 from "@/public/assets/why-us/why4.svg";
 import WhyBgImg from "@/public/assets/why-us/whyBg.svg";
 import PartnerImg from "@/public/assets/partners.png";
-import ReviewImg from "@/public/assets/reviews/review_stars.svg";
 
 import { TbArrowNarrowRight } from "react-icons/tb";
 import { useState } from "react";
@@ -97,12 +96,13 @@ export default function Home() {
 							Precision in every chemical, ensuring optimal performance.
 						</div>
 						<div className="w-full flex justify-end mt-2">
-							<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] group-hover:bg-blue-600 py-3 px-3 rounded-[12px] transition-all duration-300">
-								<TbArrowNarrowRight size={24} className="group-hover:hidden text-white" />
-
-								<span className="group-hover:block hidden text-sm font-bold">View More</span>
-								<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
-							</div>
+							<Link href="/products?category=Chemicals">
+								<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] group-hover:bg-blue-600 py-3 px-3 rounded-[12px] transition-all duration-300">
+									<TbArrowNarrowRight size={24} className="group-hover:hidden text-white" />
+									<span className="group-hover:block hidden text-sm font-bold">View More</span>
+									<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
+								</div>
+							</Link>
 						</div>
 					</div>
 
@@ -115,18 +115,21 @@ export default function Home() {
 							height={334}
 							className="rounded-md w-full"
 						/>
-						<div className="text-[#242E49] text-xl mt-4 font-[500] font-bold group-hover:text-black">Lab Glassware</div>
+						<div className="text-[#242E49] text-xl mt-4 font-[500] font-bold group-hover:text-black">
+							Lab Glassware
+						</div>
 						<div className="text-[#5D6A85] text-sm font-regular my-2 h-16 group-hover:text-black">
 							Elevate your experiments with industry-standard laboratory glassware.
 						</div>
 
 						<div className="w-full flex justify-end mt-2">
-							<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] group-hover:bg-blue-600 py-3 px-3 rounded-[12px] transition-all duration-300">
-								<TbArrowNarrowRight size={24} className="group-hover:hidden text-white" />
-
-								<span className="group-hover:block hidden text-sm font-bold">View More</span>
-								<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
-							</div>
+							<Link href="/products?category=Glassware">
+								<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] group-hover:bg-blue-600 py-3 px-3 rounded-[12px] transition-all duration-300">
+									<TbArrowNarrowRight size={24} className="group-hover:hidden text-white" />
+									<span className="group-hover:block hidden text-sm font-bold">View More</span>
+									<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
+								</div>
+							</Link>
 						</div>
 					</div>
 
@@ -146,17 +149,17 @@ export default function Home() {
 							Cutting-edge laboratory equipment sourced from industry leaders.
 						</div>
 						<div className="w-full flex justify-end mt-2">
-							<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] group-hover:bg-blue-600 py-3 px-3 rounded-[12px] transition-all duration-300">
-								<TbArrowNarrowRight size={24} className="group-hover:hidden text-white" />
-
-								<span className="group-hover:block hidden text-sm font-bold">View More</span>
-								<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
-							</div>
+							<Link href="/products?category=Equipments">
+								<div className="group flex items-center gap-2 text-white w-fit bg-[#242D47] group-hover:bg-blue-600 py-3 px-3 rounded-[12px] transition-all duration-300">
+									<TbArrowNarrowRight size={24} className="group-hover:hidden text-white" />
+									<span className="group-hover:block hidden text-sm font-bold">View More</span>
+									<TbArrowNarrowRight size={24} className="group-hover:block hidden" />
+								</div>
+							</Link>
 						</div>
 					</div>
-
-
 				</div>
+
 
 				<div className="bg-[#242E48] md:h-[702px] h-fit w-full rounded-[24px] mt-20 flex items-center justify-center relative">
 					<div className="max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 my-10 md:px-0 px-4 sm:px-8">
@@ -308,8 +311,8 @@ export default function Home() {
 						subText="Ready to level up your Laboratory?"
 					/>
 				</div>
+				{/* footer */}
 			</div>
-			{/* footer */}
-		</main>
+		</main >
 	);
 }
