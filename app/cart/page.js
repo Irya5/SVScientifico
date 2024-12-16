@@ -27,7 +27,7 @@ export default function Cart() {
             =========================
             ${cart.map((product) => `
             Product Name: ${product.ProductName}
-            Pack: ${product.Pack}
+            Pack: ${product.selectedPackSize}
             =========================
             `).join('')}
         `;
@@ -71,7 +71,7 @@ export default function Cart() {
                         <div key={index} className="flex justify-between items-center py-4 border-b border-[#E4E8ED]">
                             <div className="flex flex-col">
                                 <h3 className="font-medium text-[#242E49]">{product.ProductName}</h3>
-                                <p className="text-sm text-[#5D6A85]">Pack: {product.Pack}</p>
+                                <p className="text-sm text-[#5D6A85]">Pack: {product.selectedPackSize}</p>
                             </div>
                             <button
                                 className="text-red-500 hover:text-red-700"
