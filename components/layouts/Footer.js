@@ -1,3 +1,5 @@
+'use client';
+
 import LogoFooterImg from "@/public/assets/logo_footer.svg";
 import { CiMail } from "react-icons/ci";
 import { IoIosCall } from "react-icons/io";
@@ -42,7 +44,7 @@ export default function Footer() {
 
 				<div className="flex flex-col gap-4 text-[#FDFCFF] md:mx-25 mt-10">
 					<div className="hover:translate-x-[5px]">
-						<a href="mailto:svscientificco@gmail.com">
+						<a onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=svscientificco@gmail.com', '_blank')}>
 							<CiMail />
 							<div>svscientificco@gmail.com</div>
 						</a>

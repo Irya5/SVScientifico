@@ -51,14 +51,15 @@ export default function ContactUs() {
 			<div className="grid md:grid-cols-3 grid-cols-1 gap-20 mt-16 text-[#242E49] font-[700] text-md px-4 md:px-8">
 				<div className="flex flex-col items-center md:items-start">
 					<div className="bg-white shadow-sm border border-[#00115E14] w-fit p-2 rounded-[9px]">
-						<a href="mailto:svscientificco@gmail.com" className="hover:underline duration-200 linear mt-2">
+						<a onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=svscientificco@gmail.com', '_blank')}
+							className="hover:underline duration-200 linear mt-2">
 							<CiMail title="Mail" />
 						</a>
 					</div>
 					<div className="mt-4 text-center md:text-left">Mail us</div>
 					<div className="text-[#5D6A85] font-[400] text-center md:text-left">We are here to help</div>
 					<div className="text-[#5D6A85] mt-2 flex items-center justify-center md:justify-start space-x-2">
-						<a href="mailto:svscientificco@gmail.com" className="hover:underline duration-200 linear mt-2">
+						<a onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=svscientificco@gmail.com', '_blank')} className="hover:underline duration-200 linear mt-2">
 							svscientificco@gmail.com
 						</a>
 						{isCopiedEmail ?

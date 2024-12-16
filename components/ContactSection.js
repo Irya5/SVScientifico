@@ -54,7 +54,10 @@ const ContactSection = ({
           <div className="mt-10">{emailPlaceholder}</div>
           <div className="text-[#5D6A85] font-[400]">We are here to help</div>
           <div className="mt-6 flex items-center space-x-2">
-            <a href={`mailto:${email}`} className="hover:underline duration-200 linear mt-2">
+          <a
+						onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=svscientificco@gmail.com', '_blank')}
+						className="hover:underline duration-200 linear mt-2"
+					>
               {email}
             </a>
             {isCopiedEmail ? (

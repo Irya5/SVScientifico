@@ -48,7 +48,10 @@ export default function Navbar() {
 					</a>
 				</div>
 				<div className="flex items-end justify-end col-span-4">
-					<a href="mailto:svscientificco@gmail.com" className="flex items-center gap-1">
+					<a
+						onClick={() => window.open('https://mail.google.com/mail/?view=cm&fs=1&to=svscientificco@gmail.com', '_blank')}
+						className="flex items-center gap-1"
+					>
 						<CiMail className="text-[#0F67FD] font-[700]" size={20} />
 						<div>svscientificco@gmail.com</div>
 					</a>
