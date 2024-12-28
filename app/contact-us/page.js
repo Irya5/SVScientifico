@@ -43,7 +43,7 @@ export default function ContactUs() {
 						Connect with us
 					</div>
 					<div className="mt-4 md:px-0 px-8 text-[#5D6A85] text-md  text-center md:text-left">
-						Get in Touch: Contact Us for Inquiries and Assistance
+						Get in Touch: We’re Here to Help with Any Inquiries or Assistance!
 					</div>
 				</div>
 			</div>
@@ -80,7 +80,7 @@ export default function ContactUs() {
 						<IoIosCall />
 					</div>
 					<div className="mt-4 text-center md:text-left">Call us</div>
-					<div className="text-[#5D6A85] font-[400] text-center md:text-left">Mon-Fri from 10am to 5pm</div>
+					<div className="text-[#5D6A85] font-[400] text-center md:text-left">Mon-Fri from 10A.M to 5P.M</div>
 					<div className="text-[#5D6A85] mt-2 flex items-center justify-center md:justify-start space-x-2">
 						<a href="tel:+919119014669">
 							<span>+91 9119014669</span>

@@ -13,8 +13,8 @@ const ContactSection = ({
   emailPlaceholder = "Email Us",
   phonePlaceholder = "Call Us",
   visitPlaceholder = "Visit Us",
-  boldText = "Wanna Explore More?",
-  subText = " If you can't find what you need, reach out to us."
+  boldText = "Excited to Explore More!",
+  subText = "We’re here to help with anything you need. Feel free to reach out, we’d love to assist you!"
 }) => {
   const [isCopiedEmail, setIsCopiedEmail] = useState(false);
   const [isCopiedPhone, setIsCopiedPhone] = useState(false);
@@ -77,7 +77,7 @@ const ContactSection = ({
             <IoIosCall />
           </div>
           <div className="mt-10">{phonePlaceholder}</div>
-          <div className="text-[#5D6A85] font-[400]">Mon-Fri from 10am to 5pm</div>
+          <div className="text-[#5D6A85] font-[400]">Mon-Fri from 10A.M to 5P.M</div>
           <div className="mt-6 flex items-center space-x-2">
             <a href={`tel:${phone}`}>
               <span>{phone}</span>
@@ -99,7 +99,7 @@ const ContactSection = ({
             <FaLocationDot />
           </div>
           <div className="mt-10">{visitPlaceholder}</div>
-          <div className="text-[#5D6A85] font-[400]">Visit our office HQ</div>
+          <div className="text-[#5D6A85] font-[400]">Visit our office </div>
           <button
             className="text-[#3D4966] text-base border border-[#D6DAE4] px-3 py-2 mt-6 rounded-[9px]"
             onClick={() => window.open(addressLink, "_blank")}

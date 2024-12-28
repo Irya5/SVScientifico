@@ -38,7 +38,7 @@ const ServiceCard = ({ imgSrc, title, description, category }) => (
 // Why Choose Us Card Component
 const WhyChooseCard = ({ imgSrc, title, description }) => (
 	<div className="bg-[#3D4966] flex md:flex-row flex-col gap-4 p-6 md:p-4 md:rounded-[12px] rounded-[24px]">
-		<div className="bg-[#5D6A85] p-4 rounded-[12px] md:w-auto w-fit">
+		<div className="bg-[#5D6A85] p-4 rounded-[12px] md:w-auto w-fit flex justify-center items-center">
 			<Image src={imgSrc} alt={title} width={44} height={44} className="rounded-md" />
 		</div>
 		<div className="flex-1">
@@ -99,7 +99,7 @@ export default function Home() {
 				</div>
 
 				<div className="max-w-5xl flex flex-col md:grid grid-cols-3 gap-8 my-10 mx-4">
-					<ServiceCard imgSrc={Serve1} title="Chemical Solutions" description="Precision in every chemical, ensuring optimal performance." category="Chemicals" />
+					<ServiceCard imgSrc={Serve1} title="Lab Chemical Solutions" description="Precision in every chemical, ensuring optimal performance." category="Chemicals" />
 					<ServiceCard imgSrc={Serve2} title="Lab Glassware" description="Elevate your experiments with industry-standard laboratory glassware." category="Glassware" />
 					<ServiceCard imgSrc={Serve3} title="Lab Equipment" description="Cutting-edge laboratory equipment sourced from industry leaders." category="Equipments" />
 				</div>
@@ -119,10 +119,10 @@ export default function Home() {
 						</div>
 					</div>
 					<div className="flex flex-col md:gap-4 gap-y-8">
-						<WhyChooseCard imgSrc={WhyUs1} title="Authentic Brands Only" description="All products are 100% branded, ensuring authenticity and quality with every purchase." />
-						<WhyChooseCard imgSrc={WhyUs2} title="Unbeatable Pricing" description="We strive to offer the most competitive prices to our customers." />
-						<WhyChooseCard imgSrc={WhyUs3} title="Diverse Product Range" description="Your one-stop solution for diverse laboratory needs." />
-						<WhyChooseCard imgSrc={WhyUs4} title="Stock Availability" description="Shop with confidence knowing that our inventory is available with the products you need." />
+						<WhyChooseCard imgSrc={WhyUs3} title="Authentic Brands Only" description="All products are 100% branded, ensuring authenticity and quality with each purchase." />
+						<WhyChooseCard imgSrc={WhyUs4} title="Unbeatable Pricing" description="We strive to offer the most competitive prices to our customers." />
+						<WhyChooseCard imgSrc={WhyUs2} title="Diverse Product Range" description="Your one-stop solution for diverse laboratory needs." />
+						<WhyChooseCard imgSrc={WhyUs1} title="Stock Availability" description="Shop with confidence knowing that our inventory is available with all the products you need." />
 					</div>
 				</div>
 				<Image src={WhyBgImg} alt="why_bg_img" width={97} height={143} className="absolute md:block hidden bottom-0 left-[12%]" />
@@ -135,7 +135,7 @@ export default function Home() {
 						Trusted by many
 					</button>
 					<div className="text-[#242E49] font-[500] text-[48px] leading-[50px] mt-2 pr-4">
-						What people say about us
+						What client say about us
 					</div>
 				</div>
 				<div className="flex flex-col items-center justify-center">
@@ -144,7 +144,7 @@ export default function Home() {
 				</div>
 				<div className="flex flex-col items-center justify-center">
 					<div className="text-[#242E49] text-[36px] font-[700]">2K+</div>
-					<div className="text-[#5D6A85] text-lg font-[700]">Satisfied Clientage</div>
+					<div className="text-[#5D6A85] text-lg font-[700]">Satisfied Clients</div>
 				</div>
 				<div className="flex flex-col items-center justify-center">
 					<div className="text-[#242E49] text-[36px] font-[700]">1K+</div>
@@ -160,8 +160,8 @@ export default function Home() {
 			{/* Contact Section */}
 			<div className="flex justify-center items-center mt-20">
 				<ContactSection
-					boldText="Get in Touch"
-					subText="Ready to level up your Laboratory?"
+					boldText="Let’s Connect!"
+					subText="Excited to elevate your laboratory? We’re here to help you every step of the way!"
 				/>
 			</div>
 		</main>

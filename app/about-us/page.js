@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Team1 from "@/public/assets/team/team-1.png";
 import Team2 from "@/public/assets/team/team-2.png";
@@ -18,8 +19,25 @@ import Rankem from "@/public/assets/authorized-users/Rankem.svg";
 import Avantor from "@/public/assets/authorized-users/Avantor.svg";
 import Molychem from "@/public/assets/authorized-users/Molychem.svg";
 import CoreBgImg from "@/public/assets/core-values/coreBg.svg";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
+	useEffect(() => {
+		// Initialize AOS
+		AOS.init({
+			duration: 800, // Animation duration
+		});
+
+		// Refresh AOS if content changes dynamically (or elements are added after load)
+		AOS.refresh();
+	}, []);
+
+	const handleClick = (url) => {
+		window.open(url, '_blank'); // Open the URL in a new tab
+	};
+
 	return (
 		<main className="min-h-screen bg-[#FAFCFF] ">
 			<div className="pt-20 py-0 md:py-20 md:px-24 px-4">
@@ -197,64 +215,63 @@ export default function Home() {
 				</div>
 
 				<div className="grid xl:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-5 mt-16">
-					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
-
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }} data-aos="fade-up" data-aos-duration="800" onClick={() => handleClick('https://www.thermofisher.in/chemicals/en/home.html')}>
 						<div className="p-2">
 							<Image src={Thermofisher} alt="user" width={130} height={130} />
 						</div>
 					</div>
 
-					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }} data-aos="fade-up" data-aos-duration="800" onClick={() => handleClick('https://www.thermofisher.in/chemicals/en/brands/qualigens.html')}>
 						<div className="p-2">
 							<Image src={Qualigens} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }} data-aos="fade-up" data-aos-duration="800" onClick={() => handleClick('https://www.cytivalifesciences.com/en/us/about-us/our-brands/whatman?srsltid=AfmBOorMSblEvKU94SZYdDVUOa5Dn-E9powjoLnnDZcAC7xJ0znloBU7')}>
 						<div className="p-2">
 							<Image src={Whatman} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }} data-aos="fade-up" data-aos-duration="800" onClick={() => handleClick('https://myborosil.com/')}>
 						<div className="p-2">
 							<Image src={Borosil} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }} data-aos="fade-up" data-aos-duration="800" onClick={() => handleClick('https://www.remilabworld.com/')}>
 						<div className="p-2">
 							<Image src={Remi} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }} data-aos="fade-up" data-aos-duration="800" onClick={() => handleClick('https://www.systronicsindia.com/')}>
 						<div className="p-2">
 							<Image src={Systronics} alt="user" width={100} height={80} />
 						</div>
 					</div>
-					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }} data-aos="fade-up" data-aos-duration="800" onClick={() => handleClick('')}>
 						<div className="p-2">
 							<Image src={Finar} alt="user" width={100} height={100} />
 						</div>
 					</div>
-					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }} data-aos="fade-up" data-aos-duration="800" onClick={() => handleClick('https://www.shimadzu.com/')}>
 						<div className="p-2">
 							<Image src={Shimadzu} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }} data-aos="fade-up" data-aos-duration="800" onClick={() => handleClick('https://www.dwk.com/')}>
 						<div className="p-2">
 							<Image src={Duran} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }} data-aos="fade-up" data-aos-duration="800" onClick={() => handleClick('https://in.vwr.com/cms/rankem')}>
 						<div className="p-2">
 							<Image src={Rankem} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }} data-aos="fade-up" data-aos-duration="800" onClick={() => handleClick('https://in.vwr.com/store/?gad_source=1&gclid=CjwKCAiAgoq7BhBxEiwAVcW0LFU7QvO1T-qEfryIiJtjNiwPrtvZBIFcQwyZ3rNLRPMbg3LVZ79qQhoCcWkQAvD_BwE&gclsrc=aw.ds')}>
 						<div className="p-2">
 							<Image src={Avantor} alt="user" width={130} height={130} />
 						</div>
 					</div>
-					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }}>
+					<div className="w-full sm:w-[130px] md:w-[150px] lg:w-[192px] h-auto p-4 sm:p-2 md:p-4 rounded-[12px] flex items-center justify-center" style={{ boxShadow: '0 0px 8px rgba(0, 17, 94, 0.08)' }} data-aos="fade-up" data-aos-duration="800" onClick={() => handleClick('https://www.molychem.net/')}>
 						<div className="p-2">
 							<Image src={Molychem} alt="user" width={130} height={130} />
 						</div>
@@ -270,10 +287,10 @@ export default function Home() {
 							Management
 						</button>
 						<div className="text-[#242E49] font-[500] text-[36px] md:text-[48px] leading-[50px] mt-2 pr-4">
-							Meet Our Team
+							Meet Our Leaders
 						</div>
 						<div className="text-[#5D6A85] text-md mt-4">
-							Ready to level up your Laboratory?
+							Unlock the full potential of your Laboratory!
 						</div>
 					</div>
 				</div>

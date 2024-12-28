@@ -21,9 +21,9 @@ export default function Cart() {
 
     const handleCheckout = () => {
         // Create the email content (plain text format)
-        const emailSubject = "Please provide Quotation of the following items";
+        const emailSubject = "Quotation Required";
         const emailBody = `
-            Order Details:
+            Please provide Quotation:
             =========================
             ${cart.map((product) => `
             Product Name: ${product.ProductName}
