@@ -76,7 +76,9 @@ export default function Home() {
 			{/* Brand Section */}
 			<div className="bg-[#242E49] md:mx-20 mx-4 md:h-[350px] h-[650px] my-10 rounded-xl brand-background-svg flex md:items-center items-start md:pl-28 pl-6 pt-8">
 				<div className="flex flex-col">
-					<div className="text-[#DEE3E8] border border-[#DEE3E8] py-3 px-7 rounded-[9px] text-sm w-fit font-gt-super">Our Brands</div>
+					<div className="text-[#DEE3E8] border border-[#DEE3E8] py-3 px-7 rounded-[9px] text-sm w-fit font-gt-super">
+					<a href="/about-us#our-brands-section"> Our Brands </a>
+					</div>
 					<div className="mt-6 text-[#FDFCFF] text-[48px] font-[700]">
 						Authorised <br />
 						Distributor
@@ -88,9 +90,6 @@ export default function Home() {
 			<div className="flex flex-col items-center justify-center py-10">
 				<div className="max-w-4xl flex flex-col items-center md:grid grid-cols-2 gap-8 my-10 mx-4">
 					<div className="text-[#242E49] flex flex-col md:items-start items-center">
-						<ul className="text-sm list-disc pl-4 font-gt-super">
-							<li>Our Services</li>
-						</ul>
 						<div className="md:text-[48px] text-[36px] font-[500]">What We Serve</div>
 					</div>
 					<div className="text-[#5D6A85] text-md font-regular leading-7 md:text-left text-center">
@@ -109,8 +108,7 @@ export default function Home() {
 			<div className="bg-[#242E48] md:h-[702px] h-fit w-full rounded-[24px] mt-20 flex items-center justify-center relative">
 				<div className="max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-8 my-10 md:px-0 px-4 sm:px-8">
 					<div className="flex flex-col justify-center gap-4 w-full sm:w-[300px]">
-						<div className="text-[#DEE3E8] px-6 py-2 rounded-[12px] border border-[#DEE3E8] w-fit font-gt-super">Features</div>
-						<div className="text-[#FDFCFF] text-[40px] sm:text-[56px] leading-[45px] sm:leading-[60px] font-[700]">
+					<div className="text-[#DEE3E8] px-6 py-2 rounded-[12px] border border-[#DEE3E8] w-fit font-gt-super">Features</div>						<div className="text-[#FDFCFF] text-[40px] sm:text-[56px] leading-[45px] sm:leading-[60px] font-[700]">
 							Why <br />
 							Choose us
 						</div>
@@ -134,7 +132,7 @@ export default function Home() {
 					<button className="text-[#3D4966] text-base border border-[#D6DAE4] px-3 py-2 rounded-[9px] font-gt-super">
 						Trusted by many
 					</button>
-					<div className="text-[#242E49] font-[500] text-[48px] leading-[50px] mt-2 pr-4">
+					<div className="text-[#242E49] font-[500] text-[48px] leading-[50px] mt-4 pr-4">
 						What client say about us
 					</div>
 				</div>

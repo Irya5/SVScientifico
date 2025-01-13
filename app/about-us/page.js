@@ -42,9 +42,6 @@ export default function Home() {
 		<main className="min-h-screen bg-[#FAFCFF] ">
 			<div className="pt-20 py-0 md:py-20 md:px-24 px-4">
 				<div className="text-[#242E49]">
-					<ul className="text-sm list-disc pl-4 hidden md:block font-gt-super">
-						<li>About us</li>
-					</ul>
 					<div className="text-[36px] md:text-[48px] font-[500] leading-[44px]  md:leading-[50px] mt-0 text-center md:text-left md:mt-4 w-full md:w-1/2">
 						Welcome to a narrative of personalized excellence in every chapter.
 					</div>
@@ -204,7 +201,7 @@ export default function Home() {
 				/>
 			</div>
 
-			<div className="py-24 bg-white md:px-24 px-12">
+			<div className="py-24 bg-white md:px-24 px-12" id="our-brands-section">
 				<div className="flex flex-col items-center">
 					<button className="text-[#3D4966] text-base border border-[#D6DAE4] px-3 py-2 rounded-[9px]">
 						Our Brands

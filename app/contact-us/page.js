@@ -36,14 +36,11 @@ export default function ContactUs() {
 		<main className="bg-[#FAFCFF] md:px-24 py-20 md:px-24 px-4">
 			<div className="">
 				<div className="text-[#242E49]">
-					<ul className="text-sm list-disc pl-4 md:block hidden font-gt-super">
-						<li>Contact us</li>
-					</ul>
 					<div className="text-[36px] md:text-[48px] font-[500] text-center md:text-left  leading-[50px] mt-4  w-full md:w-1/2">
 						Connect with us
 					</div>
 					<div className="mt-4 md:px-0 px-8 text-[#5D6A85] text-md  text-center md:text-left">
-						Get in Touch: We’re Here to Help with Any Inquiries or Assistance!
+						We’re Here to Help with Any Inquiries or Assistance!
 					</div>
 				</div>
 			</div>

@@ -35,7 +35,7 @@ const ContactSection = ({
     <div className="my-20 mx-4">
       <div className="flex flex-col items-center">
         <button className="text-[#3D4966] text-base border border-[#D6DAE4] px-3 py-2 rounded-[9px] font-gt-super">
-          Contact us
+          <a href="/contact-us">Contact us</a>
         </button>
         <div className="text-[#242E49] font-[500] text-[48px] leading-[50px] mt-2 pr-4 font-bold">
           {boldText}
