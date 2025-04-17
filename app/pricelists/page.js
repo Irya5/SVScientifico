@@ -29,7 +29,7 @@ export default function Pricelists() {
     { name: 'Systronics Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1SRWv0Xef23Su735LG9SS7Bll2A-IMbIr' },
     { name: 'Tarson Pricelist', year: '2023-2024', pdf: 'https://drive.google.com/uc?export=download&id=1MufGJZAKDy4zdMMzHiryiOlsG0wyj6dJ' },
     { name: 'Toshniwal Pricelist', year: '2023-2024', pdf: 'https://drive.google.com/uc?export=download&id=1RHibjcYf5fNOwt3bp1GLazsI7wZW9mad' },
-    { name: 'Whatman Pricelist', year: '2025-2026', pdf: 'https://docs.google.com/spreadsheets/d/1tJPwUhmPtR7iS9YXONJJtEI9J1KPfKqC/export?format=pdf' },
+    { name: 'Whatman Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1Xb9sfgG7amo7zioYipMUeOdev3bDX8k3' },
   ];
 
 
