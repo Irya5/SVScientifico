@@ -19,9 +19,11 @@
 }
 
 .brand-background-svg {
-  background-image: url(../public/assets/Authorised\ distributor\ desktop.svg);
+  background-image: url("/assets/Authorised distributor desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #131E3A;
-  width: inherit;
 }
 
 @media screen and (max-width: 560px) {
