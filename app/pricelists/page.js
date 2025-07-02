@@ -9,7 +9,7 @@ export default function Pricelists() {
     { name: 'Aczet Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1U63g-x_Nz-ZbxQdCvoZli8liCZ18CJrC' },
     { name: 'Ambassador Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1FlzLzc80ob1vw6dbabHuFfLwMKkr5O7u' },
     { name: 'Aquasol Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1lbzI9n-GpWuWZj_6f09Wog6py7gvGEiN' },
-    { name: 'Avantor Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1zj513oPHHjFraPmlaaM1UQbHg_0E28iY' },
+    { name: 'Avantor Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1PeJM0vP9dso1gY10ZlIP5MX85uZ27H6D' },
     { name: 'Axiva Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1f51PymHW5Xmwe8juvIfgzxrJH88Lifhm' },
     { name: 'Borosil Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1P8876N89V46kaF1XcZczytnLYORl-3T-' },
     { name: 'Eutech Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1Jq7sPwhqasbyxLDOoD8VJUh1Yts76aYN' },
@@ -17,7 +17,7 @@ export default function Pricelists() {
     { name: 'Himedia Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=17bIxWJHT0qknab6MSk1yfBprDoNLBDta' },
     { name: 'Labtronics Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1Gy6MIcKv4DFyBpQCz1O8Vyac2lNnIGPr' },
     { name: 'Lemico Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1ObJZ5wVAHzS6YIxPveTSa1qq3ahpwIb8' },
-    { name: 'Loba Pricelist', year: '2023-2024', pdf: 'https://drive.google.com/uc?export=download&id=1Jbt_lE4UsGMtpTODukd_WBWNEpJNJjs7' },
+    { name: 'Loba Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1Po-ZYPBO2vn8igUlxOCJzmflRuocF5Iz' },
     { name: 'Merck Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1j1bd_VihZ560kWX9a4ndG8FfGte8zj-w' },
     { name: 'Olympus Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1hAH9qxeuUUvA6J09M-vAqAR7Jhwg4M2f' },
     { name: 'Physics Indosaw Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1rXjSkC-TPG3-OYQT23jqjVbfC5olGAe-' },
@@ -27,9 +27,9 @@ export default function Pricelists() {
     { name: 'Shimadzu Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1ko_TARIyhuO2-YCDTj_BZYaA1DwK4Mpq' },
     { name: 'SRL Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1SwRYSkF0gN0QZh0LDaf4MtWjxjuz5PQv' },
     { name: 'Systronics Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1SRWv0Xef23Su735LG9SS7Bll2A-IMbIr' },
-    { name: 'Tarson Pricelist', year: '2023-2024', pdf: 'https://drive.google.com/uc?export=download&id=1MufGJZAKDy4zdMMzHiryiOlsG0wyj6dJ' },
+    { name: 'Tarson Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1RZSjMck-ctbZnFKtFvgh1oM5RGGg14QI' },
     { name: 'Toshniwal Pricelist', year: '2023-2024', pdf: 'https://drive.google.com/uc?export=download&id=1RHibjcYf5fNOwt3bp1GLazsI7wZW9mad' },
-    { name: 'Whatman Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1Xb9sfgG7amo7zioYipMUeOdev3bDX8k3  q' },
+    { name: 'Whatman Pricelist', year: '2025-2026', pdf: 'https://docs.google.com/spreadsheets/d/1tJPwUhmPtR7iS9YXONJJtEI9J1KPfKqC/export?format=pdf' },
   ];
 
 
