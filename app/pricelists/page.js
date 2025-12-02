@@ -25,7 +25,7 @@ export default function Pricelists() {
     { name: 'Qualigens Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1CHiPkxNnyZnExrkZpJfWWKj06HOV2isw' },
     { name: 'Remi Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1rJ43RX1MHsnvKVNXxs-C7wj90CiUwYyL' },
     { name: 'Shimadzu Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1ko_TARIyhuO2-YCDTj_BZYaA1DwK4Mpq' },
-    { name: 'SRL Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1SwRYSkF0gN0QZh0LDaf4MtWjxjuz5PQv' },
+    { name: 'SRL Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1t638NLBDaRhNcD4c1UxkWjbEdXoBer7S' },
     { name: 'Systronics Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1SRWv0Xef23Su735LG9SS7Bll2A-IMbIr' },
     { name: 'Tarson Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1PqLdj78MoVXQgOR4ZDM9WvKeZwGr9_75' },
     { name: 'Toshniwal Pricelist', year: '2023-2024', pdf: 'https://drive.google.com/uc?export=download&id=1RHibjcYf5fNOwt3bp1GLazsI7wZW9mad' },
