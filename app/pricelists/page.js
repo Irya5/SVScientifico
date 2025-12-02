@@ -18,7 +18,7 @@ export default function Pricelists() {
     { name: 'Labtronics Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1Gy6MIcKv4DFyBpQCz1O8Vyac2lNnIGPr' },
     { name: 'Lemico Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1ObJZ5wVAHzS6YIxPveTSa1qq3ahpwIb8' },
     { name: 'Loba Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1Po-ZYPBO2vn8igUlxOCJzmflRuocF5Iz' },
-    { name: 'Merck Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1j1bd_VihZ560kWX9a4ndG8FfGte8zj-w' },
+    { name: 'Merck Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1eDENNUXaj2N31UlTyG30tnK9TsAk0m0q' },
     { name: 'Olympus Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1hAH9qxeuUUvA6J09M-vAqAR7Jhwg4M2f' },
     { name: 'Physics Indosaw Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1rXjSkC-TPG3-OYQT23jqjVbfC5olGAe-' },
     { name: 'PolyLab Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1RZSjMck-ctbZnFKtFvgh1oM5RGGg14QI'},
