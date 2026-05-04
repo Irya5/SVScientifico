@@ -8,7 +8,7 @@ export default function Pricelists() {
   const pricelists = [
     { name: 'Aczet Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1U63g-x_Nz-ZbxQdCvoZli8liCZ18CJrC' },
     { name: 'Ambassador Pricelist', year: '2026-2027', pdf: 'https://drive.google.com/uc?export=download&id=1oVcz6L1KtnpVT3MEr810jjhqj-MAiktc' },
-    { name: 'Aquasol Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1lbzI9n-GpWuWZj_6f09Wog6py7gvGEiN' },
+    { name: 'Aquasol Pricelist', year: '2026-2027', pdf: 'https://drive.google.com/uc?export=download&id=1QoUqTsHaJEvyzr3cU_EtzjOs1PzpZUd-' },
     { name: 'Avantor Pricelist', year: '2026-2027', pdf: 'https://drive.google.com/uc?export=download&id=1qv-pXGpQ70rn4IEnrVyFCmlAY6EltmLO' },
     { name: 'Axiva Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1f51PymHW5Xmwe8juvIfgzxrJH88Lifhm' },
     { name: 'Borosil Pricelist', year: '2026-2027', pdf: 'https://drive.google.com/uc?export=download&id=1-_vgxtI9vZzX9tTyhVNiRkWwjbvMHiMR' },
@@ -25,11 +25,11 @@ export default function Pricelists() {
     { name: 'Qualigens Pricelist', year: '2026-2027', pdf: 'https://drive.google.com/uc?export=download&id=1Oe58z5sj8BnksvqOrb67zz5XawQw3vNV' },
     { name: 'Remi Pricelist', year: '2026-2027', pdf: 'https://drive.google.com/uc?export=download&id=1rtikXunnBYlX6q8uFhsUaIaKQ52cm1Sc' },
     { name: 'Shimadzu Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1ko_TARIyhuO2-YCDTj_BZYaA1DwK4Mpq' },
-    { name: 'SRL Pricelist', year: '2025-2026', pdf: 'https://drive.google.com/uc?export=download&id=1t638NLBDaRhNcD4c1UxkWjbEdXoBer7S' },
+    { name: 'SRL Pricelist', year: '2026-2027', pdf: 'https://drive.google.com/uc?export=download&id=16GBB12_CdsIZo8NO8OJTJ2Thc3S9MYF7' },
     { name: 'Systronics Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1SRWv0Xef23Su735LG9SS7Bll2A-IMbIr' },
     { name: 'Tarson Pricelist', year: '2026-2027', pdf: 'https://docs.google.com/spreadsheets/d/1V68HHlldxrUTKOV5FG_AK3pB2yqJGadF/export?format=pdf' },
     { name: 'Toshniwal Pricelist', year: '2023-2024', pdf: 'https://drive.google.com/uc?export=download&id=1RHibjcYf5fNOwt3bp1GLazsI7wZW9mad' },
-    { name: 'Whatman Pricelist', year: '2026-2027', pdf: 'https://docs.google.com/spreadsheets/d/1O0Ll2G1UpBiBJF-NHoInRLGPya98P19c/export?format=pdf' },
+    { name: 'Whatman Pricelist', year: '2026-2027', pdf: 'https://drive.google.com/uc?export=download&id=1gHnvxiu_cGfKLXjPKpW-_KN7TV-u4M-B' },
   ];
 
 
