@@ -8,7 +8,7 @@ export default function Pricelists() {
   const pricelists = [
     { name: 'Aczet Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1U63g-x_Nz-ZbxQdCvoZli8liCZ18CJrC' },
     { name: 'Ambassador Pricelist', year: '2026-2027', pdf: 'https://drive.google.com/uc?export=download&id=1oVcz6L1KtnpVT3MEr810jjhqj-MAiktc' },
-    { name: 'Aquasol Pricelist', year: '2026-2027', pdf: 'https://drive.google.com/uc?export=download&id=1QoUqTsHaJEvyzr3cU_EtzjOs1PzpZUd-' },
+    { name: 'Aquasol Pricelist', year: '2026-2027', pdf: 'https://drive.google.com/uc?export=download&id=1gHnvxiu_cGfKLXjPKpW-_KN7TV-u4M-B' },
     { name: 'Avantor Pricelist', year: '2026-2027', pdf: 'https://drive.google.com/uc?export=download&id=1qv-pXGpQ70rn4IEnrVyFCmlAY6EltmLO' },
     { name: 'Axiva Pricelist', year: '2024-2025', pdf: 'https://drive.google.com/uc?export=download&id=1f51PymHW5Xmwe8juvIfgzxrJH88Lifhm' },
     { name: 'Borosil Pricelist', year: '2026-2027', pdf: 'https://drive.google.com/uc?export=download&id=1-_vgxtI9vZzX9tTyhVNiRkWwjbvMHiMR' },
